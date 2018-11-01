@@ -5,6 +5,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Huset KBH</title>
+    <style>
+        img {
+            width: 100%;
+        }
+    </style>
 </head>
 
 <body>
@@ -13,12 +18,29 @@
     </header>
 
     <main>
+        <!--       img-->
         <section class="container" data-container></section>
         <template data-template>
             <article class="postListview">
                 <img src="" alt="">
                 <h2 data-title></h2>
                 <p data-text></p>
+            </article>
+        </template>
+        <!--        section: introduktion til huset-->
+        <section class="container1" data-container1></section>
+        <template data-template1>
+            <article class="introListview">
+                <h2 data-title1></h2>
+                <p data-text1></p>
+            </article>
+        </template>
+        <!--        section: bliv frivillig-->
+        <section class="container2" data-container2></section>
+        <template data-template2>
+            <article class="voluntaryListview">
+                <h2 data-title2></h2>
+                <p data-text2></p>
             </article>
         </template>
     </main>
@@ -29,24 +51,61 @@
         let postTemplate = document.querySelector("[data-template]");
         let postContainer = document.querySelector("[data-container]");
 
+        let intro;
+        let introTemplate = document.querySelector("[data-template1]");
+        let introContainer = document.querySelector("[data-container1]");
+
+        let voluntary;
+        let voluntaryTemplate = document.querySelector("[data-template2]");
+        let voluntaryContainer = document.querySelector("[data-container2]");
+
+        //-----------------------------------------------
         async function getJSON() {
             let jsonData = await fetch("http://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/pages?slug=home-page");
             posts = await jsonData.json();
             visPosts();
             console.log(posts);
+
+            let jsonData1 = await fetch("http://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/home?slug=home-huset-kbh");
+            intro = await jsonData1.json();
+            visIntro();
+            console.log(intro);
+
+            let jsonData2 = await fetch("http://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/home?slug=home-bliv-frivillig");
+            voluntary = await jsonData2.json();
+            visVoluntary();
+            console.log(voluntary);
         }
 
+        //-------------------------------------------------
         function visPosts() {
             console.log(posts);
             posts.forEach(post => {
                 let klon = postTemplate.cloneNode(true).content;
-               klon.querySelector("img").src = post.acf.img.url;
-                klon.querySelector("[data-title]").textContent = post.title.rendered;
-                klon.querySelector("[data-text]").innerHTML = post.content.rendered;
+                klon.querySelector("img").src = post.acf.img.url;
                 postContainer.appendChild(klon);
             })
         }
 
+        function visIntro() {
+            console.log(intro);
+            intro.forEach(intro => {
+                let klon = introTemplate.cloneNode(true).content;
+                klon.querySelector("[data-title1]").textContent = intro.title.rendered;
+                klon.querySelector("[data-text1]").innerHTML = intro.content.rendered;
+                introContainer.appendChild(klon);
+            })
+        }
+
+        function visVoluntary() {
+            console.log(voluntary);
+            voluntary.forEach(voluntary =>{
+                let klon = voluntaryTemplate.cloneNode(true).content;
+                klon.querySelector("[data-title2]").textContent = voluntary.title.rendered;
+                klon.querySelector("[data-text2]").innerHTML = voluntary.content.rendered;
+                voluntaryContainer.appendChild(klon);
+            })
+        }
     </script>
 </body>
 
