@@ -9,12 +9,61 @@
         img {
             width: 100%;
         }
+
+        p{
+            font-family: Avenir;
+        }
+
+        h2{
+            font-family: Avenir;
+        }
+
+        .container{
+            margin: 2vw;
+        }
+        .container1{
+            border: 1px solid black;
+            margin: 2vw;
+        }
+
+        .container2{
+            border: 1px solid black;
+            margin: 2vw;
+        }
     </style>
 </head>
 
 <body>
     <header>
-        <h1>Huset KBH</h1>
+        <section id="logo">
+            <a href="index.html"><h1>huset</h1></a>
+        </section>
+
+        <nav>
+            <ul>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="husettilbyder.html">Huset tilbyder</a>
+                    <ul>
+                        <li><a href="blivfrivillig.html">Bliv Frivillig</a><li>
+                        <li><a href="faciliteter.html">Faciliteter</a></li>
+                        <li><a href="booklokale.html">Book Lokale</a></li>
+                        <li><a href="skabevents.html">Skab Events</a></li>
+                    </ul>
+                </li>
+                <li><a href="om.html">Om</a>
+                    <ul>
+                        <li><a href="arrangoere.html">Samarbejdspartnere</a></li>
+                    </ul>
+                </li>
+                <li><a href="kontakt.html">Kontakt</a>
+                    <ul>
+                        <li><a href="ledige.html">Ledige stillinger</a></li>
+                        <li><a href="generelle.html">Generelle sprøgsmål</a></li>
+                        <li><a href="aministration.html">Husets administration</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
     </header>
 
     <main>
@@ -44,6 +93,10 @@
             </article>
         </template>
     </main>
+
+    <footer>
+        <h2>footer</h2>
+    </footer>
 
     <script>
         document.addEventListener("DOMContentLoaded", getJSON);
