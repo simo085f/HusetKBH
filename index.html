@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Huset KBH</title>
+</head>
+
+<body>
+    <header>
+        <h1>Huset KBH</h1>
+    </header>
+
+    <main>
+        <section class="container" data-container></section>
+        <template data-template>
+            <article class="postListview">
+                <img src="" alt="">
+                <h2 data-title></h2>
+                <p data-text></p>
+            </article>
+        </template>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", getJSON);
+        let posts;
+        let postTemplate = document.querySelector("[data-template]");
+        let postContainer = document.querySelector("[data-container]");
+
+        async function getJSON() {
+            let jsonData = await fetch("http://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/pages?slug=home-page");
+            posts = await jsonData.json();
+            visPosts();
+            console.log(posts);
+        }
+
+        function visPosts() {
+            console.log(posts);
+            posts.forEach(post => {
+                let klon = postTemplate.cloneNode(true).content;
+               klon.querySelector("img").src = post.acf.img.url;
+                klon.querySelector("[data-title]").textContent = post.title.rendered;
+                klon.querySelector("[data-text]").innerHTML = post.content.rendered;
+                postContainer.appendChild(klon);
+            })
+        }
+
+    </script>
+</body>
+
+</html>
