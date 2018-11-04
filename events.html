@@ -6,6 +6,21 @@
     <title>Events</title>
 </head>
 
+<style>
+    @font-face {
+font-family: "Huset";
+src: url("fonts/huset.otf");
+}
+
+    .image{
+        width: 100%;
+    }
+
+    .date{
+        font-family: Huset;
+    }
+
+    </style>
 <body>
     <header></header>
 
@@ -14,11 +29,12 @@
 
         <template class="event_template">
             <article class="event_container">
+               <div class="title"></div>
                 <div class="date"></div>
                 <div class="time"></div>
                 <div class="place"></div>
                 <div class="pris"></div>
-                <a class="kob_billet" href=""><button class="kob_knap">Køb Billet</button></a>
+                <a class="kob_billet" href="" target="_blank"><button class="kob_knap">Køb Billet</button></a>
                 <div class="genre"></div>
                 <div class="kob_billet_i_doren"></div>
                 <img class="image" src="" alt="">
@@ -45,6 +61,21 @@
         function visEvents(){
             console.log("visEvents");
 
+            allEvents.forEach(event =>{
+
+                let klon = eventTarget.cloneNode(true).content;
+
+                klon.querySelector(".image").src = event.acf.image;
+                klon.querySelector(".genre").textContent = event.acf.genre;
+                klon.querySelector(".date").textContent = event.acf.date;
+                klon.querySelector(".place").textContent = event.acf.place;
+                klon.querySelector(".pris").textContent = event.acf.pris + " kr";
+                klon.querySelector(".kob_billet").href = event.acf.kob_billet;
+                klon.querySelector(".time").textContent = event.acf.time;
+                klon.querySelector(".title").textContent = event.title.rendered;
+
+                eventOutPut.appendChild(klon);
+            })
         }
 
 
