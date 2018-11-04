@@ -1,3 +1,4 @@
+<!--
 
 <header>
      <section id="logo">
@@ -30,4 +31,106 @@
             </ul>
         </nav>
 </header>
+-->
 
+<header>
+    <section>
+        <div class="dropdown">
+            <button class="dropbtn"><a href="index.html"><img src="huset_neon.png" alt=""></a></button>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn"><a href="events.html">Events</a></button>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn"><a href="huset_tilbyder.html">Huset Tilbyder</a></button>
+            <div class="dropdown-content">
+                <a href="volentary.html">Bliv Frivillig</a>
+                <a href="faciliteter.html">Faciliteter</a>
+                <a href="book_lokale.html">Book Lokale</a>
+                <a href="skab_events.html">Skab Events</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn"><a href=om.html>Om</a></button>
+            <div class="dropdown-content">
+                <a href="arrangoere.html">Arrangøre</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn"><a href="kontakt.html">Kontakt</a></button>
+            <div class="dropdown-content">
+                <a href="ledige.html">Ledige stillinger</a>
+                <a href="generelle.html">Generelle Spørgsmål</a>
+                <a href="aministration.html">Husets Administration</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <input type="text" placeholder="Search..">
+        </div>
+    </section>
+</header>
+
+<style>
+    header {
+        background-color: #16182E;
+    }
+
+    img {
+        width: 150px;
+    }
+
+    .dropbtn {
+        background-color: #16182E;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+    }
+
+    .dropbtn a {
+        text-decoration: none;
+        color: white;
+        font-family: Avenir;
+        text-transform: uppercase;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #16182E;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        font-family: Avenir;
+    }
+
+    .dropdown-content a:hover {
+        color: grey;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown:hover .dropbtn a {
+        color: grey;
+    }
+
+
+</style>

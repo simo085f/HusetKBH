@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+
+<body>
+    <header></header>
+
+    <main>
+        <section class="events"></section>
+
+        <template class="event_template">
+            <article class="event_container">
+                <div class="date"></div>
+                <div class="time"></div>
+                <div class="place"></div>
+                <div class="pris"></div>
+                <a class="kob_billet" href=""><button class="kob_knap">Køb Billet</button></a>
+                <div class="genre"></div>
+                <div class="kob_billet_i_doren"></div>
+                <img class="image" src="" alt="">
+            </article>
+        </template>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", getJson);
+
+        let allEvents;
+        let eventTarget = document.querySelector(".event_template");
+        let eventOutPut = document.querySelector(".events");
+
+        eventFilter = "alle";
+
+        async function getJson(){
+            let jsonObject = await fetch("http://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/events");
+            allEvents = await jsonObject.json();
+            console.log(allEvents);
+            visEvents();
+        }
+
+        function visEvents(){
+            console.log("visEvents");
+
+        }
+
+
+    </script>
+</body>
+</html>
