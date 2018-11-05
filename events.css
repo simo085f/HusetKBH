@@ -18,6 +18,13 @@
         opacity: 0.6;
     }
 
+.event_logo{
+    opacity: 1;
+    width: 50%;
+    margin: 4vw;
+    margin-bottom: 0;
+}
+
     main {
         margin: 8vw;
         padding: 4vw;
