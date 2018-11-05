@@ -3,14 +3,14 @@
         src: url("fonts/huset.otf");
     }
 
+body {
+        margin: 0;
+        background-image: url(wall.png);
+    }
+
     .date {
         font-family: Huset;
         font-size: 2em;
-    }
-
-    body {
-        margin: 0;
-        background-image: url(wall.png);
     }
 
     img {
@@ -18,12 +18,12 @@
         opacity: 0.6;
     }
 
-.event_logo{
-    opacity: 1;
-    width: 50%;
-    margin: 4vw;
-    margin-bottom: 0;
-}
+    .event_logo {
+        opacity: 1;
+        width: 50%;
+        margin: 4vw;
+        margin-bottom: 0;
+    }
 
     main {
         margin: 8vw;
@@ -44,38 +44,40 @@
         display: grid;
     }
 
-.title{
-    font-size: 2em;
-    text-align: center;
-}
+    .title {
+        font-size: 2em;
+        text-align: center;
+    }
 
-.kob_knap{
-    font-family: Avenir;
-    border: none;
-    font-size: 1.5em;
-    padding: 2vw;
-}
+    .kob_knap {
+        font-family: Avenir;
+        border: none;
+        font-size: 1.5em;
+        padding: 2vw;
+    }
 
-.pris, .place, .time{
-    font-size: 1.5em;
-}
+    .pris,
+    .place,
+    .time {
+        font-size: 1.5em;
+    }
 
-.knapper{
-    padding: 4vw;
-    color: white;
-    text-align: center;
-}
+    .knapper {
+        padding: 4vw;
+        color: white;
+        text-align: center;
+    }
 
-.menu_item{
-    font-family: Avenir;
-    border: none;
-    padding: 1vw;
-    font-size:16px;
-    background: none;
-    color: white;
-    border-bottom: 1px solid white;
-}
+    .menu_item {
+        font-family: Avenir;
+        border: none;
+        padding: 1vw;
+        font-size: 16px;
+        background: none;
+        color: white;
+        border-bottom: 1px solid white;
+    }
 
-.menu_item:hover{
-    color: gray;
-}
+    .menu_item:hover {
+        color: gray;
+    }

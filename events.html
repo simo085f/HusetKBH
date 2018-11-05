@@ -53,7 +53,7 @@
         eventFilter = "alle";
 
         async function getJson(){
-            let jsonObject = await fetch("http://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/events");
+            let jsonObject = await fetch("http://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/events/?per_page=100");
             allEvents = await jsonObject.json();
             console.log(allEvents);
             visEvents();
@@ -97,6 +97,8 @@
                     }
                 })
             }
+
+
 
 
     </script>
