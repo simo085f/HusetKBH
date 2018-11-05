@@ -95,7 +95,7 @@ body {
         font-family: Avenir;
         border: none;
         padding: 1vw;
-        font-size: 16px;
+        font-size: 3vw;
         background: none;
         color: white;
         border-bottom: 1px solid white;
@@ -112,3 +112,13 @@ body {
     z-index: 1;
     opacity: 0.6;
 }
+
+/*
+@media screen and (min-width:768px){
+.events{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+}
+*/
