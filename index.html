@@ -43,7 +43,10 @@
             </article>
         </template>
 
-        <section class="container3" data-container3></section>
+        <section class="container3" data-container3>
+        <h1>HUSETS NYESTE EVENTS</h1>
+        </section>
+
         <template data_template3>
             <article class="eventsListview">
                 <div class="title"></div>
@@ -51,7 +54,7 @@
                 <div class="time"></div>
                 <div class="place"></div>
                 <div class="pris"></div>
-<!--                <a class="kob_billet" href="" target="_blank"><button class="kob_knap">Køb Billet</button></a>-->
+                <a class="kob_billet" href="events.html" target="_blank"><button class="kob_knap">LÆSE MERE</button></a>
                 <div class="genre"></div>
                 <div class="kob_billet_i_doren"></div>
                 <img class="image" src="" alt="">
@@ -144,6 +147,7 @@
                 klon.querySelector(".date").innerHTML = events.acf.date;
                 klon.querySelector(".time").innerHTML = events.acf.time;
                 klon.querySelector(".place").innerHTML = events.acf.place;
+                klon.querySelector(".pris").innerHTML = events.acf.pris +" kr.";
                 klon.querySelector(".image").src = events.acf.image;
                 eventContainer.appendChild(klon);
             })
