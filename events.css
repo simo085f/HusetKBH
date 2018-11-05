@@ -52,3 +52,22 @@
 .pris, .place, .time{
     font-size: 1.5em;
 }
+
+.knapper{
+    padding: 4vw;
+    color: white;
+    text-align: center;
+}
+
+.menu_item{
+    font-family: Avenir;
+    border: none;
+    padding: 1vw;
+    font-size:16px;
+    background: none;
+    color: white;
+}
+
+.menu_item:hover{
+    color: gray;
+}
