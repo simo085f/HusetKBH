@@ -1,0 +1,35 @@
+    @font-face {
+font-family: "Huset";
+src: url("fonts/huset.otf");
+}
+
+.date{
+    font-family: Huset;
+}
+
+    body{
+    margin: 0;
+    background-image: url(wall.png);
+}
+
+img{
+    width: 100%;
+}
+
+main{
+    margin: 8vw;
+    padding: 4vw;
+    color: white;
+    margin-top: 15vw;
+}
+
+.events{
+    padding: 4vw;
+    color: white;
+    font-family: Avenir;
+}
+
+.event_container{
+    border: 3px solid white;
+    margin-bottom: 4vw;
+}
