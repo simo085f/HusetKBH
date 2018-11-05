@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
      <link rel="stylesheet" href="om.css" type="text/css">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.4.2/css/all.css' integrity='sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns' crossorigin='anonymous'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <title>Document</title>
 </head>
 <body>
@@ -11,33 +14,37 @@
         <section id="logo">
             <img src="huset_neon.png" alt=logo>
         </section>
+<nav>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)"class="closebtn"onclick="closeNav()">&times;</a>
+    <a href="events.html">Events</a>
+    <button class="dropdown-btn">Huset tilbyder
+        <i class="fa fa-caret-down"></i></button>
+         <div class="dropdown-container">
+    <a href="blivfrivillig.html">Bliv frivillig</a>
+    <a href="faciliteter.html">Faciliteter</a>
+    <a href="booklokale.html">Book lokale</a>
+    <a href="skabevents.html">Skab events</a>
+  </div>
+         <button class="dropdown-btn">Om
+        <i class="fa fa-caret-down"></i>
+        </button>
+         <div class="dropdown-container">
+    <a href="historie.html">Historie</a>
+    <a href="arrangoere.html">Arrangører</a>
+  </div>
+          <button class="dropdown-btn">Kontakt
+         <i class="fa fa-caret-down"></i></button>
+         <div class="dropdown-container">
+    <a href="ledige.html">Ledige stillinger</a>
+    <a href="generelle.html">Generelle spørgsmål</a>
+    <a href="aministration.html">Administration</a>
+  </div>
 
-        <nav>
-            <ul>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="husettilbyder.html">Huset tilbyder</a>
-                    <ul>
-                        <li><a href="blivfrivillig.html">Bliv Frivillig</a><li>
-                        <li><a href="faciliteter.html">Faciliteter</a></li>
-                        <li><a href="booklokale.html">Book Lokale</a></li>
-                        <li><a href="skabevents.html">Skab Events</a></li>
-                    </ul>
-                </li>
-                <li><a href="om.html">Om</a>
-                    <ul>
-                        <li><a href="arrangoere.html">Arrangører</a></li>
-                        <li><a href="historie.html">Historie</a></li>
-                    </ul>
-                </li>
-                <li><a href="kontakt.html">Kontakt</a>
-                    <ul>
-                        <li><a href="ledige.html">Ledige stillinger</a></li>
-                        <li><a href="generelle.html">Generelle sprøgsmål</a></li>
-                        <li><a href="aministration.html">Husets administration</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
+    </div>
+    <span onclick="openNav()"><i class="fa fa-navicon" style="font-size:35px;font-weight:10;margin-left: 2vw; margin-top: 1vw; color:white;"></i></span>
+
+    </nav>
     </header>
 
    <main>
@@ -78,6 +85,32 @@ async function getJSON(){
            })
        }
 
+       //* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+     /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+}
+
+/* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+}
 
     </script>
 </body>
