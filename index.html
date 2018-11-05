@@ -4,139 +4,17 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css" type="text/css">
     <title>Huset KBH</title>
-    <style>
-        body{
-            margin: 0;
-        }
 
-        img {
-            width: 100%;
-        }
-
-        p{
-            font-family: Avenir;
-        }
-
-        h2{
-            font-family: Avenir;
-        }
-
-        .container{
-            margin: 6vw;
-        }
-        .container1{
-            border: 1px solid black;
-            margin: 6vw;
-        }
-
-        .container2{
-            border: 1px solid black;
-            margin: 6vw;
-        }
-
-/*      nav bar  */
-
-        header{
-            background-color: white;
-            opacity: 0.7;
-        }
-    .logo_img {
-        width: 150px;
-    }
-
-    .dropbtn {
-        border: none;
-        font-size: 16px;
-    }
-
-    .dropbtn a {
-        text-decoration: none;
-        color: black;
-        font-family: Avenir;
-        text-transform: uppercase;
-
-    }
-
-    .dropdown {
-        position: relative;
-        display: inline-block;
-    }
-
-    .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: white;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-        z-index: 1;
-    }
-
-    .dropdown-content a {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-        font-family: Avenir;
-    }
-
-    .dropdown-content a:hover {
-        color: gray;
-    }
-
-    .dropdown:hover .dropdown-content {
-        display: block;
-    }
-
-    .dropdown:hover .dropbtn a {
-        color: gray;
-    }
-    </style>
 </head>
 
-<body background="background.jpg">
+<body>
 <!--   <?php include "header.html";?>-->
 
-    <header>
+ <header>
 
-        <nav>
-            <section>
-        <div class="dropdown">
-            <button class="dropbtn"><a href="index.html"><img class="logo_img" src="Huset_logo_9_B.png" alt=""></a></button>
-        </div>
-
-        <div class="dropdown">
-            <button class="dropbtn"><a href="events.html">Events</a></button>
-        </div>
-
-        <div class="dropdown">
-            <button class="dropbtn"><a href="huset_tilbyder.html">Huset Tilbyder</a></button>
-            <div class="dropdown-content">
-                <a href="volentary.html">Bliv Frivillig</a>
-                <a href="faciliteter.html">Faciliteter</a>
-                <a href="book_lokale.html">Book Lokale</a>
-                <a href="skab_events.html">Skab Events</a>
-            </div>
-        </div>
-
-        <div class="dropdown">
-            <button class="dropbtn"><a href=om.html>Om</a></button>
-            <div class="dropdown-content">
-                <a href="arrangoere.html">Arrangøre</a>
-            </div>
-        </div>
-
-        <div class="dropdown">
-            <button class="dropbtn"><a href="kontakt.html">Kontakt</a></button>
-            <div class="dropdown-content">
-                <a href="ledige.html">Ledige stillinger</a>
-                <a href="generelle.html">Generelle Spørgsmål</a>
-                <a href="aministration.html">Husets Administration</a>
-            </div>
-        </div>
-    </section>
-        </nav>
-    </header>
+ </header>
 
     <main>
         <!--       img-->
@@ -164,6 +42,7 @@
                 <p data-text2></p>
             </article>
         </template>
+
     </main>
 
     <footer>
@@ -184,6 +63,7 @@
         let voluntaryTemplate = document.querySelector("[data-template2]");
         let voluntaryContainer = document.querySelector("[data-container2]");
 
+
         //-----------------------------------------------
         async function getJSON() {
             let jsonData = await fetch("http://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/pages?slug=home-page");
@@ -200,6 +80,7 @@
             voluntary = await jsonData2.json();
             visVoluntary();
             console.log(voluntary);
+
         }
 
         //-------------------------------------------------
@@ -231,6 +112,8 @@
                 voluntaryContainer.appendChild(klon);
             })
         }
+
+
     </script>
 </body>
 

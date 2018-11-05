@@ -60,6 +60,7 @@ src: url("fonts/huset.otf");
         let allEvents;
         let eventTarget = document.querySelector(".event_template");
         let eventOutPut = document.querySelector(".events");
+        let destination = document.querySelector(".events");
 
         eventFilter = "alle";
 
@@ -68,6 +69,16 @@ src: url("fonts/huset.otf");
             allEvents = await jsonObject.json();
             console.log(allEvents);
             visEvents();
+        }
+
+        document.querySelectorAll(".menu_item").forEach(knap=>{
+            knap.addEventListener("click", filtrering);
+        })
+
+        function filtrering() {
+            eventOutPut.textContent = "";
+            eventFilter = this.getAttribute("data_kategori");
+            visEvents;
         }
 
         function visEvents(){
