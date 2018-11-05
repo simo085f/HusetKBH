@@ -75,12 +75,11 @@
                 let klon = eventTarget.cloneNode(true).content;
 
                 klon.querySelector(".image").src = event.acf.image;
-                klon.querySelector(".genre").textContent = event.acf.genre;
                 klon.querySelector(".date").textContent = event.acf.date;
                 klon.querySelector(".place").textContent = event.acf.place;
                 klon.querySelector(".pris").textContent = event.acf.pris + " kr";
                 klon.querySelector(".kob_billet").href = event.acf.kob_billet;
-                klon.querySelector(".time").textContent = event.acf.time;
+                klon.querySelector(".time").textContent = "Kl. " + event.acf.time;
                 klon.querySelector(".title").textContent = event.title.rendered;
 
                 eventOutPut.appendChild(klon);
