@@ -19,7 +19,7 @@
                 <button class="menu_item" data_kategori="Film">Film</button>
                 <button class="menu_item" data_kategori="Ord">Ord</button>
                 <button class="menu_item" data_kategori="Scenekunsk">Scenekunst</button>
-                <button class="menu_item" data_kategori="andet">Andet</button>
+                <button class="menu_item" data_kategori="Andet">Andet</button>
             </div>
         </section>
 
@@ -46,7 +46,6 @@
         let allEvents;
         let eventTarget = document.querySelector(".event_template");
         let eventOutPut = document.querySelector(".events");
-        let destination = document.querySelector(".events");
 
         eventFilter = "alle";
 
@@ -62,15 +61,24 @@
         })
 
         function filtrering() {
+
+
             eventOutPut.textContent = "";
             eventFilter = this.getAttribute("data_kategori");
-            visEvents;
+            visEvents();
+
         }
 
         function visEvents(){
-            console.log("visEvents");
+            console.log("visEvents" + eventFilter);
 
             allEvents.forEach(event =>{
+
+                if (eventFilter == event.acf.genre){
+                    udskriv();}
+                else if (eventFilter == "alle"){udskriv();}
+
+                function udskriv(){
 
                 let klon = eventTarget.cloneNode(true).content;
 
@@ -83,8 +91,10 @@
                 klon.querySelector(".title").textContent = event.title.rendered;
 
                 eventOutPut.appendChild(klon);
-            })
-        }
+                    }
+                })
+            }
+
 
 
     </script>
