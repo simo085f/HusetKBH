@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Events</title>
-    <link rel="stylesheet" href="faciliteter.css" type="text/css">
+    <link rel="stylesheet" href="booklokale.css" type="text/css">
 </head>
 
 <body>
@@ -20,7 +20,7 @@
             <article class="event_container">
                <div class="title"></div>
                 <div class="tekst"></div>
-                <img class="image" src="" alt="">
+
             </article>
         </template>
 
@@ -36,7 +36,7 @@
         eventFilter = "alle";
 
         async function getJson() {
-            let jsonObject = await fetch("http://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/faciliteter/?per_page=100");
+            let jsonObject = await fetch("http://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/book_lokale/?per_page=100");
             allEvents = await jsonObject.json();
             console.log(allEvents);
             visEvents();
@@ -74,7 +74,7 @@
 
 
                     klon.querySelector(".title").textContent = event.title.rendered;
-                    klon.querySelector(".image").src = event.acf.image;
+
                     klon.querySelector(".tekst").innerHTML = event.content.rendered;
 
 
@@ -85,4 +85,3 @@
     </script>
 </body>
 </html>
-
