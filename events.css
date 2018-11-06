@@ -16,7 +16,6 @@
 
     main {
         margin: 8vw;
-        padding: 4vw;
         color: white;
         margin-top: 15vw;
     }
@@ -25,14 +24,17 @@
         padding: 4vw;
         color: white;
         font-family: Avenir;
+        max-width: 100%;
+        display: grid;
+        grid-gap: 20px;
     }
 
     .event_container {
         border: 3px solid white;
-        margin-bottom: 4vw;
         display: grid;
         grid-template-columns: 10px repeat(2, 1fr) 10px;
         grid-template-rows: 10px repeat(6, 1fr) 10px;
+        width: 100%;
     }
 
     .title {
@@ -113,12 +115,70 @@
         opacity: 0.6;
     }
 
-    /*
+
 @media screen and (min-width:768px){
 .events{
-    display: grid;
+    display:grid;
     grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+}
+    .title{
+        font-size: 2.5vw;
+    }
 
+    .date{
+        font-size: 3.5vw;
+    }
+
+    .place{
+        font-size: 2vw;
+    }
+
+    .time{
+        font-size: 2vw;
+    }
+
+    .pris{
+        font-size: 3.5vw;
+    }
+
+    .kob_knap{
+        width: 16vw;
+        font-size: 2vw;
+        padding: 1vw;
+    }
 }
+
+@media screen and (min-width:1024px){
+    .events{
+        display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px
 }
-*/
+    .title{
+        font-size: 1.5vw;
+    }
+
+    .date{
+        font-size: 2vw;
+    }
+
+    .place{
+        font-size: 1.2vw;
+    }
+
+    .time{
+        font-size: 1.2vw;
+    }
+
+    .pris{
+        font-size: 2vw;
+    }
+
+    .kob_knap{
+        width: 10vw;
+        font-size: 1vw;
+        padding: 0.7vw;
+    }
+}
+
