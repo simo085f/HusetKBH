@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    background-image: url(wall.png);
+}
+
+main {
+    border: 3px solid white;
+    margin: 8vw;
+    padding: 4vw;
+    color: white;
+    margin-top: 15vw;
+}
+
+#logo img {
+    width: 30vw;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a {
+    font-family: 'Avenir', sans-serif;
+}
+
+ul,
+li a {
+    list-style: none;
+    color: white;
+    text-decoration: none;
+
+}
+
+li a:hover {
+    text-decoration: underline;
+
+}
+
+header {
+    position: fixed;
+    top: 0px;
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid white;
+    background-image: url(wall.png);
+    margin-right: 2vw;
+
+
+}
+
+nav {
+    height: 60px;
+    width: 100%;
+
+
+}
+
+nav ul {
+    display: flex;
+
+}
+
+nav ul li {
+    float: left;
+    list-style: none;
+    position: relative;
+    margin-right: 3vw;
+
+
+}
+
+nav ul li a {}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    background-image: url(wall.png);
+    padding: 4px;
+    text-align: left;
+
+}
+
+nav ul li ul li a {}
+
+nav ul li ul li {
+    padding-bottom: 6px;
+
+
+
+}
+
+nav ul li ul li a:hover {}
+
+nav ul li:hover ul {
+    display: block;
+    width: 150px;
+
+}
+
+a {
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    text-decoration: underline;
+
+}
