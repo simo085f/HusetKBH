@@ -3,7 +3,7 @@
         src: url("fonts/huset.otf");
     }
 
-body {
+    body {
         margin: 0;
         background-image: url(wall.png);
     }
@@ -42,12 +42,12 @@ body {
         z-index: 2;
     }
 
- .date {
+    .date {
         font-family: Huset;
         font-size: 8vw;
-     grid-column: 2/3;
-     grid-row: 3/4;
-     z-index: 2;
+        grid-column: 2/3;
+        grid-row: 3/4;
+        z-index: 2;
     }
 
     .kob_knap {
@@ -58,32 +58,32 @@ body {
         width: 40vw;
     }
 
-.kob_billet{
-    grid-column: 2/3;
-    grid-row: 7/8;
-    z-index: 2;
-}
+    .kob_billet {
+        grid-column: 2/3;
+        grid-row: 7/8;
+        z-index: 2;
+    }
 
-.time{
-    grid-column: 2/3;
-    grid-row: 4/5;
-    z-index: 2;
-    font-size: 4vw;
-}
+    .time {
+        grid-column: 2/3;
+        grid-row: 4/5;
+        z-index: 2;
+        font-size: 4vw;
+    }
 
-.place{
-    grid-column: 3/4;
-    grid-row: 3/4;
-    z-index: 2;
-    font-size: 4vw;
-}
+    .place {
+        grid-column: 3/4;
+        grid-row: 3/4;
+        z-index: 2;
+        font-size: 4vw;
+    }
 
-.pris{
-    grid-column: 3/4;
-    grid-row: 4/5;
-    z-index: 2;
-    font-size: 6vw;
-}
+    .pris {
+        grid-column: 3/4;
+        grid-row: 4/5;
+        z-index: 2;
+        font-size: 6vw;
+    }
 
     .knapper {
         padding: 4vw;
@@ -105,15 +105,15 @@ body {
         color: gray;
     }
 
-.image{
-    width: 100%;
-    grid-column: 1/9;
-    grid-row: 1/9;
-    z-index: 1;
-    opacity: 0.6;
-}
+    .image {
+        width: 100%;
+        grid-column: 1/9;
+        grid-row: 1/9;
+        z-index: 1;
+        opacity: 0.6;
+    }
 
-/*
+    /*
 @media screen and (min-width:768px){
 .events{
     display: grid;
