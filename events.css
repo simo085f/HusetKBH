@@ -200,6 +200,10 @@
     width: 78vw;
     height: 100%;
     margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4 1fr);
+    grid-template-rows: repeat (7 1fr);
+    overflow: scroll;
 }
 
 #modal.vis{
@@ -209,7 +213,49 @@
 }
 
 .modal_close{
+    background-image: url(wall.png);
+    width: 75vw;
+    padding: 2vw;
     font-family: huset;
     font-size: 50px;
+    position: fixed;
+}
+
+.modal_navn{
+    font-family: avenir;
+    font-size: 8vw;
+    grid-column: 1/3;
+    grid-row: 2/3;
+    margin-top: 20vw;
+}
+
+.modal_date{
+    font-family: huset;
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+.modal_time{
+    font-family: avenir;
+    grid-column: 1/2;
+    grid-row: 4/5;
+}
+
+.modal_place{
+    font-family: avenir;
+    grid-column: 3/4;
+    grid-row: 3/4;
+}
+
+.modal_pris{
+    font-family: avenir;
+    grid-column: 3/4;
+    grid-row: 4/5;
+}
+
+.modal_langbeskrivelse{
+    font-family: avenir;
+    grid-column: 1/4;
+    grid-row: 5/6;
 }
 

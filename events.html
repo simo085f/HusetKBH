@@ -15,9 +15,11 @@
          <div id="modal_content">
              <bottom class="modal_close">X</bottom>
              <h2 class="modal_navn"></h2>
-             <img class="modal_billed" src="" alt="">
-             <div class="modal_langbeskrivelse"></div>
+             <div class="modal_date"></div>
+             <div class="modal_place"></div>
+             <div class="modal_time"></div>
              <div class="modal_pris"></div>
+             <div class="modal_langbeskrivelse"></div>
          </div>
      </section>
 
@@ -62,6 +64,8 @@
 
         eventFilter = "alle";
 
+        let modal = document.querySelector("#modal");
+
         async function getJson(){
             let jsonObject = await fetch("http://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/events/?per_page=100");
             allEvents = await jsonObject.json();
@@ -104,10 +108,32 @@
                 klon.querySelector(".title").textContent = event.title.rendered;
                     klon.querySelector(".image").src = event.acf.image;
 
+                    klon.querySelector(".image").addEventListener("click", ()=> {
+                        visModal(event);
+                    })
+
                 eventOutPut.appendChild(klon);
                     }
                 })
             }
+
+        function visModal(eventene){
+            console.log("visModal");
+            modal.classList.add("vis");
+            modal.querySelector(".modal_navn").textContent = eventene.title.rendered;
+            modal.querySelector(".modal_date").textContent = eventene.acf.date;
+            modal.querySelector(".modal_time").textContent = "Kl." + eventene.acf.time;
+            modal.querySelector(".modal_place").textContent = eventene.acf.place;
+            modal.querySelector(".modal_pris").textContent = eventene.acf.pris + " Kr.";
+            modal.querySelector(".modal_langbeskrivelse").innerHTML = eventene.content.rendered;
+
+            modal.querySelector(".modal_close").addEventListener("click", skjulModal);
+        }
+
+        function skjulModal(){
+            console.log("skjulModal");
+            modal.classList.remove("vis");
+        }
 
     </script>
 </body>
