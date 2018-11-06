@@ -20,7 +20,7 @@
                 <button class="menu_item" data_kategori="Musik">Musik</button>
                 <button class="menu_item" data_kategori="Film">Film</button>
                 <button class="menu_item" data_kategori="Ord">Ord</button>
-                <button class="menu_item" data_kategori="Scenekunsk">Scenekunst</button>
+                <button class="menu_item" data_kategori="Scenekunst">Scenekunst</button>
                 <button class="menu_item" data_kategori="Andet">Andet</button>
             </div>
         </section>
@@ -85,13 +85,14 @@
 
                 let klon = eventTarget.cloneNode(true).content;
 
-                klon.querySelector(".image").src = event.acf.image;
+
                 klon.querySelector(".date").textContent = event.acf.date;
                 klon.querySelector(".place").textContent = event.acf.place;
                 klon.querySelector(".pris").textContent = event.acf.pris + " kr";
                 klon.querySelector(".kob_billet").href = event.acf.kob_billet;
                 klon.querySelector(".time").textContent = "Kl. " + event.acf.time;
                 klon.querySelector(".title").textContent = event.title.rendered;
+                    klon.querySelector(".image").src = event.acf.image;
 
                 eventOutPut.appendChild(klon);
                     }
