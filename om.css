@@ -103,11 +103,19 @@ h1, h2, h3, h4, h5, p, a{
     padding: 0px;
     position: relative;
     z-index: 2;
+    display: flex;
+
+
 
 }
 
 i{
-    margin-top: -7vw;
+    margin-top: 10px;
+
+
+
+
+
 
 }
 
