@@ -135,12 +135,15 @@ i{
     outline: none;
     color: white;
     letter-spacing: 1px;
+    font-family: 'Avenir', sans-serif;
+
 }
 
 ::-webkit-input-placeholder{
     color: white;
     letter-spacing: 1px;
     text-transform: uppercase;
+    font-family: 'Avenir', sans-serif;
 
 }
 
