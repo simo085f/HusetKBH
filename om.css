@@ -11,6 +11,15 @@ main{
     margin-top: 15vw;
 }
 
+a{
+
+    color: white;
+}
+
+#tider a{
+    color: black;
+}
+
 #logo img{
     width: 30vw;
     float: right;
@@ -119,6 +128,25 @@ i{
 
 }
 
+/* soMe ikoner*/
+#soMeIkoner{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: 110px;
+    margin-top: -44px;
+
+}
+.soMe{
+    color: white;
+    margin: 6px;
+
+}
+
+.soMe a{
+    color: white;
+}
+
 /* søgefunktion*/
 
 .wrapper{
@@ -126,6 +154,7 @@ i{
     top: 2.5%;
     left: 47%;
     transform: translate(-50%, -50%);
+    opacity: 0;
 }
 
 .search_container{
@@ -215,6 +244,12 @@ footer{
 
 @media screen and (min-width:400px){
 
+    #soMeIkoner{
+    margin-left: 120px;
+    margin-top: -44px;
+
+}
+
     .wrapper{
     position: absolute;
     top: 3%;
@@ -241,11 +276,17 @@ footer{
 }
 
 @media screen and (min-width:627px){
+    #soMeIkoner{
+    margin-left: 10px;
+    margin-top: -44px;
+
+}
        .wrapper{
     position: absolute;
-    top: 4.5%;
-    left: 52%;
+    top: 3.4%;
+    left: 51.5%;
     transform: translate(-50%, -50%);
+           opacity: 1;
 }
     .input{
     width: 130px;
@@ -288,6 +329,16 @@ footer{
     #adresse{
         flex-basis: 200px;
     }
+
+    #soMeIkoner{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    position: relative;
+        margin-left: 100px;
+        margin-top: -40.5px;
+
+}
 }
 
 @media screen and (min-width: 715px){
