@@ -184,3 +184,16 @@ i{
         transform: scale(1);
     }
 }
+
+footer{
+    background-color: white;
+    opacity: 0.8;
+}
+
+#footer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2vw;
+}
