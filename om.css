@@ -213,7 +213,58 @@ footer{
     font-weight: 600;
 }
 
+@media screen and (min-width:400px){
+
+    .wrapper{
+    position: absolute;
+    top: 3%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+    .input{
+    width: 80px;
+    height: 2.5px;
+    border: 2px solid white;
+
+
+}
+
+
+
+.luk-btn{
+
+    top: 30px;
+    right: 70px;
+
+}
+
+}
+
 @media screen and (min-width:627px){
+       .wrapper{
+    position: absolute;
+    top: 4.5%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+}
+    .input{
+    width: 130px;
+    height: 15px;
+    border: 2px solid white;
+    text-transform: uppercase;
+
+
+}
+
+
+
+.luk-btn{
+
+    top: 36px;
+    right: 80px;
+
+}
+
     #footer{
         flex-direction: row;
         justify-content: space-between;
@@ -240,6 +291,27 @@ footer{
 }
 
 @media screen and (min-width: 715px){
+
+       .wrapper{
+    position: absolute;
+    top: 3.5%;
+    left: 54%;
+    transform: translate(-50%, -50%);
+}
+    .input{
+    width: 130px;
+    height: 20px;
+    border: 3px solid white;
+    text-transform: uppercase;
+
+}
+
+.luk-btn{
+
+    top: 40px;
+    right: 80px;
+
+}
     #persondata{
         flex-basis: 470px;
     }
@@ -258,6 +330,27 @@ footer{
 }
 
 @media screen and (min-width: 1024px){
+
+       .wrapper{
+    position: absolute;
+    top: 4.1%;
+    left: 54%;
+    transform: translate(-50%, -50%);
+}
+    .input{
+    width: 200px;
+    height: 30px;
+    border: 3px solid white;
+    text-transform: uppercase;
+
+}
+
+.luk-btn{
+
+    top: 44px;
+    right: 90px;
+
+}
 #footer{
     display: flex;
     flex-wrap: wrap;
