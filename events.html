@@ -11,21 +11,22 @@
     <header></header>
 
     <main>
-<!--
-     <section id="modal">
-         <div id="modal_content">
-             <bottom>Close</bottom>
-             <h2 class="modal_navn"></h2>
-             <img class="modal_billed" src="" alt="">
-             <div class="modal_langbeskrivelse"></div>
-             <div class="modal_pris"></div>
-         </div>
-     </section>
--->
+        <section id="modal">
+            <div id="modal_content">
+                <button class="modal_close">X</button>
+                <h2 class="modal_navn"></h2>
+                <div class="modal_date"></div>
+                <div class="modal_place"></div>
+                <div class="modal_time"></div>
+                <div class="modal_pris"></div>
+                <div class="modal_langbeskrivelse"></div>
+                <img class="modal_image" src="" alt="">
+            </div>
+        </section>
 
-      <img class="event_logo" src="events_logo_white.png" alt="">
+        <img class="event_logo" src="events_logo_white.png" alt="">
 
-       <section id="sorteringsknapper">
+        <section id="sorteringsknapper">
             <h1></h1>
             <div class="knapper">
                 <button class="menu_item" data_kategori="alle">Alle</button>
@@ -41,14 +42,13 @@
 
         <template class="event_template">
             <article class="event_container">
-               <div class="title"></div>
+                <div class="title"></div>
                 <div class="date"></div>
                 <div class="time"></div>
                 <div class="place"></div>
                 <div class="pris"></div>
                 <a class="kob_billet" href="" target="_blank"><button class="kob_knap">Køb Billet</button></a>
                 <div class="genre"></div>
-                <div class="kob_billet_i_doren"></div>
                 <img class="image" src="" alt="">
             </article>
         </template>
@@ -64,14 +64,16 @@
 
         eventFilter = "alle";
 
-        async function getJson(){
+        let modal = document.querySelector("#modal");
+
+        async function getJson() {
             let jsonObject = await fetch("http://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/events/?per_page=100");
             allEvents = await jsonObject.json();
             console.log(allEvents);
             visEvents();
         }
 
-        document.querySelectorAll(".menu_item").forEach(knap=>{
+        document.querySelectorAll(".menu_item").forEach(knap => {
             knap.addEventListener("click", filtrering);
         })
 
@@ -84,33 +86,57 @@
 
         }
 
-        function visEvents(){
+        function visEvents() {
             console.log("visEvents" + eventFilter);
 
-            allEvents.forEach(event =>{
+            allEvents.forEach(event => {
 
-                if (eventFilter == event.acf.genre){
-                    udskriv();}
-                else if (eventFilter == "alle"){udskriv();}
+                if (eventFilter == event.acf.genre) {
+                    udskriv();
+                } else if (eventFilter == "alle") {
+                    udskriv();
+                }
 
-                function udskriv(){
+                function udskriv() {
 
-                let klon = eventTarget.cloneNode(true).content;
+                    let klon = eventTarget.cloneNode(true).content;
 
 
-                klon.querySelector(".date").textContent = event.acf.date;
-                klon.querySelector(".place").textContent = event.acf.place;
-                klon.querySelector(".pris").textContent = event.acf.pris + " kr";
-                klon.querySelector(".kob_billet").href = event.acf.kob_billet;
-                klon.querySelector(".time").textContent = "Kl. " + event.acf.time;
-                klon.querySelector(".title").textContent = event.title.rendered;
+                    klon.querySelector(".date").textContent = event.acf.date;
+                    klon.querySelector(".place").textContent = event.acf.place;
+                    klon.querySelector(".pris").textContent = event.acf.pris + " kr";
+                    klon.querySelector(".kob_billet").href = event.acf.kob_billet;
+                    klon.querySelector(".time").textContent = "Kl. " + event.acf.time;
+                    klon.querySelector(".title").textContent = event.title.rendered;
                     klon.querySelector(".image").src = event.acf.image;
 
-                eventOutPut.appendChild(klon);
-                    }
-                })
-            }
+                    klon.querySelector(".image").addEventListener("click", () => {
+                        visModal(event);
+                    })
 
+                    eventOutPut.appendChild(klon);
+                }
+            })
+        }
+
+        function visModal(eventene) {
+            console.log("visModal");
+            modal.classList.add("vis");
+            modal.querySelector(".modal_navn").textContent = eventene.title.rendered;
+            modal.querySelector(".modal_image").src = eventene.acf.image
+            modal.querySelector(".modal_date").textContent = eventene.acf.date;
+            modal.querySelector(".modal_time").textContent = "Kl." + eventene.acf.time;
+            modal.querySelector(".modal_place").textContent = eventene.acf.place;
+            modal.querySelector(".modal_pris").textContent = eventene.acf.pris + " Kr.";
+            modal.querySelector(".modal_langbeskrivelse").innerHTML = eventene.content.rendered;
+
+            modal.querySelector(".modal_close").addEventListener("click", skjulModal);
+        }
+
+        function skjulModal() {
+            console.log("skjulModal");
+            modal.classList.remove("vis");
+        }
     </script>
 </body>
 </html>
