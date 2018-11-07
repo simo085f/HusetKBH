@@ -21,6 +21,7 @@ h1, h2, h3, h4, h5, p, a{
     font-family: 'Avenir', sans-serif;
 }
 
+/* navigation */
 
 #mySidenav {
   background-image: url(wall.png);
@@ -47,6 +48,7 @@ h1, h2, h3, h4, h5, p, a{
 
 .active {
   color: white;
+    opacity: 0.5;
 }
 
 
@@ -59,9 +61,12 @@ h1, h2, h3, h4, h5, p, a{
 .fa-caret-down {
   float: right;
   padding-right: 8px;
+    position: relative;
+    z-index: 4;
 
 
 }
+
 
 .sidenav {
     height: 100%;
@@ -94,4 +99,85 @@ h1, h2, h3, h4, h5, p, a{
     padding: 20px;
 }
 
+.dropdown-btn {
+    padding: 0px;
+    position: relative;
+    z-index: 2;
 
+}
+
+i{
+    margin-top: -7vw;
+
+}
+
+/* søgefunktion*/
+
+.wrapper{
+    position: absolute;
+    top: 6.5%;
+    left: 47%;
+    transform: translate(-50%, -50%);
+}
+
+.search_container{
+    position: relative;
+    padding: 20px 50px;
+
+}
+
+.input{
+    width: 170px;
+    border: 3px solid white;
+    background: transparent;
+    padding: 10px 30px;
+    border-radius: 50px;
+    outline: none;
+    color: white;
+    letter-spacing: 1px;
+}
+
+::-webkit-input-placeholder{
+    color: white;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+}
+
+.luk-btn{
+    position: absolute;
+    z-index: ;
+    top: 27px;
+    right: 70px;
+    font-size: 25px;
+    cursor: pointer;
+    color: white;
+    transition: opacity 0.5s ease;
+    opacity: 1; /*skal være på 0 hvis animationen skal du*/
+}
+
+.luk-btn.active{
+    opacity: 1;
+    animation-name: animate;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    color: white;
+}
+
+@keyframes animate{
+    0%{
+        transform: scale(1);
+    }
+     25%{
+        transform: scale(1.2);
+    }
+     50%{
+        transform: scale(1.5);
+    }
+     75%{
+        transform: scale(1.2);
+    }
+     100%{
+        transform: scale(1);
+    }
+}
