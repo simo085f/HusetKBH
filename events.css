@@ -209,7 +209,6 @@
     z-index: 3;
     pointer-events: none;
     padding: 3vw;
-    display: none;
 }
 
 /*media queries for #modal --START--*/
