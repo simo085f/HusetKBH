@@ -88,7 +88,7 @@
     }
 
     .knapper {
-        padding: 4vw;
+/*        padding: 4vw;*/
         color: white;
         text-align: center;
     }
@@ -147,6 +147,14 @@
         font-size: 2vw;
         padding: 1vw;
     }
+
+    .event_logo {
+        width: 40%;
+    }
+
+    .menu_item{
+        font-size: 2vw;
+    }
 }
 
 @media screen and (min-width:1024px){
@@ -182,7 +190,11 @@
     }
 
     .event_logo {
-        width: 40%;
+        width: 30%;
+    }
+
+    .menu_item{
+        font-size: 2vw;
     }
 }
 
