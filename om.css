@@ -243,19 +243,19 @@ footer{
 
 }
     #persondata{
-        flex-basis: 0px;
+        flex-basis: 20px;
     }
 
     #sponsorer{
-        flex-basis: 0px;
+        flex-basis: 20px;
     }
 
     #kontakt{
-        flex-basis: 0px;
+        flex-basis: 180px;
     }
 
     #adresse{
-        flex-basis: 0px;
+        flex-basis: 170px;
     }
 
 
