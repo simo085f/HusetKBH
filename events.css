@@ -209,6 +209,8 @@
     z-index: 3;
     pointer-events: none;
     padding: 3vw;
+    opacity: 0;
+    transition: 1;
 }
 
 /*media queries for #modal --START--*/
@@ -659,11 +661,13 @@
 
 .modal_close{
     background-image: url(wall.png);
-    width: 75vw;
+    width: 78vw;
     padding: 2vw;
     font-family: huset;
     font-size: 50px;
     position: fixed;
+    color: white;
+    border: none;
 }
 
 .modal_navn{
