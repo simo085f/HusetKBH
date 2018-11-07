@@ -188,6 +188,10 @@ i{
 footer{
     background-color: white;
     opacity: 0.8;
+     position: absolute;
+    clear: both;
+    width: 100%;
+
 }
 
 #footer{
@@ -195,5 +199,12 @@ footer{
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
-    margin: 2vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+
+
+}
+
+.overskrift{
+    font-weight: 600;
 }
