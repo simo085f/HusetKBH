@@ -230,6 +230,24 @@ footer{
     }
 }
 
+@media screen and (min-width: 715px){
+    #persondata{
+        flex-basis: 470px;
+    }
+
+    #sponsorer{
+        flex-basis: 200px;
+    }
+
+    #kontakt{
+        flex-basis: 200px;
+    }
+
+    #adresse{
+        flex-basis: 100px;
+    }
+}
+
 @media screen and (min-width: 1024px){
 #footer{
     display: flex;
