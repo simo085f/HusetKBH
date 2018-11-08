@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+    background-image: url(wall.png);
+}
+
+main {
+    border: 3px solid white;
+    margin: 8vw;
+    padding: 4vw;
+    color: white;
+    margin-top: 15vw;
+}
+
+a {
+
+    color: white;
+}
+
+@media screen and (min-width:1024px){
+    main{
+    margin: 10vw 13vw 4vw 13vw;
+    }
+
+}
