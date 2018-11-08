@@ -301,6 +301,10 @@ footer {
     .wrapper{
         opacity: 1;
     }
+
+    #logo img{
+        width: 25vw;
+    }
 }
 
 @media screen and (min-width: 715px) {
@@ -324,6 +328,10 @@ footer {
 
 @media screen and (min-width: 1024px) {
 
+    main{
+        margin-left: 16vw;
+        margin-right: 16vw;
+    }
     .wrapper {
 
 
@@ -388,6 +396,7 @@ footer {
 @media screen and (min-width:1500px) {
     .wrapper {
         top: 3vw;
+        left: 55%
     }
 
     .input {
