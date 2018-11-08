@@ -1,9 +1,9 @@
-body{
+body {
     margin: 0;
     background-image: url(wall.png);
 }
 
-main{
+main {
     border: 3px solid white;
     margin: 8vw;
     padding: 4vw;
@@ -11,67 +11,75 @@ main{
     margin-top: 15vw;
 }
 
-a{
+a {
 
     color: white;
 }
 
-#tider a{
+#tider a {
     color: black;
 }
 
-#logo img{
+#logo img {
     width: 30vw;
     float: right;
 
 }
 
-h1, h2, h3, h4, h5, p, a{
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a {
     font-family: 'Avenir', sans-serif;
 }
 
 /* navigation */
 
 #mySidenav {
-  background-image: url(wall.png);
-  padding-top: 20px;
+    background-image: url(wall.png);
+    padding-top: 20px;
     position: absolute;
     z-index: 3;
 }
 
-#mySidenav a, .dropdown-btn {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 20px;
-  color: white;
-  border: none;
-  background: none;
-  width:100%;
-  text-align: left;
-  cursor: pointer;
-  outline: none;
+#mySidenav a,
+.dropdown-btn {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
 }
 
 
-#mySidenav a:hover, .dropdown-btn:hover {
-  color: #f1f1f1;
+#mySidenav a:hover,
+.dropdown-btn:hover {
+    color: #f1f1f1;
 }
 
 .active {
-  color: white;
+    color: white;
     opacity: 0.5;
 }
 
 
 .dropdown-container {
-  display: none;
-  background-image: url(wall.png);
-  padding-left: 8px;
+    display: none;
+    background-image: url(wall.png);
+    padding-left: 8px;
 }
 
 .fa-caret-down {
-  float: right;
-  padding-right: 8px;
+    float: right;
+    padding-right: 8px;
     position: relative;
     z-index: 4;
 
@@ -116,22 +124,16 @@ h1, h2, h3, h4, h5, p, a{
     z-index: 2;
     display: flex;
 
-
-
 }
 
-i{
+i {
     margin-top: 10px;
-
-
-
-
-
 
 }
 
 /* soMe ikoner*/
-#soMeIkoner{
+
+#soMeIkoner {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -141,35 +143,36 @@ i{
     z-index: 2;
 
 }
-.soMe{
+
+.soMe {
     color: white;
     margin: 6px;
 
 }
 
-.soMe a{
+.soMe a {
     color: white;
 }
 
 /* søgefunktion*/
 
-.wrapper{
+.wrapper {
     position: absolute;
-    top: 2.5%;
-    left: 47%;
+    top: 3.5vw;
+    left: 51%;
     transform: translate(-50%, -50%);
     opacity: 0;
 }
 
-.search_container{
+.search_container {
     position: relative;
     padding: 30.5px 60px;
 
 }
 
-.input{
-    width: 80px;
-    height: 1px;
+.input {
+    width: 100px;
+    height: 4px;
     border: 1.5px solid white;
     background: transparent;
     padding: 10px 30px;
@@ -179,9 +182,10 @@ i{
     letter-spacing: 1px;
     font-family: 'Avenir', sans-serif;
 
+
 }
 
-::-webkit-input-placeholder{
+::-webkit-input-placeholder {
     color: white;
     letter-spacing: 1px;
     font-size: 15px;
@@ -189,19 +193,21 @@ i{
 
 }
 
-.luk-btn{
+.luk-btn {
     position: absolute;
     z-index: ;
-    top: 27px;
+    top: 30px;
     right: 70px;
     font-size: 25px;
     cursor: pointer;
     color: white;
     transition: opacity 0.5s ease;
-    opacity: 1; /*skal være på 0 hvis animationen skal du*/
+
+    opacity: 1;
+    /*skal være på 0 hvis animationen skal du*/
 }
 
-.luk-btn.active{
+.luk-btn.active {
     opacity: 1;
     animation-name: animate;
     animation-duration: 0.5s;
@@ -209,108 +215,54 @@ i{
     color: white;
 }
 
-@keyframes animate{
-    0%{
+@keyframes animate {
+    0% {
         transform: scale(1);
     }
-     25%{
+    25% {
         transform: scale(1.2);
     }
-     50%{
+    50% {
         transform: scale(1.5);
     }
-     75%{
+    75% {
         transform: scale(1.2);
     }
-     100%{
+    100% {
         transform: scale(1);
     }
 }
 
-footer{
+footer {
     background-color: white;
     opacity: 0.8;
-     position: absolute;
+    position: absolute;
     width: 100%;
 
 }
 
-#footer{
+#footer {
     display: flex;
-   flex-wrap:wrap;
+    flex-wrap: wrap;
     flex-direction: column;
     text-align: center;
 }
 
-.overskrift{
+.overskrift {
     font-weight: 600;
 }
 
-@media screen and (min-width:400px){
+@media screen and (min-width:400px) {
 
-    #soMeIkoner{
-    margin-left: 120px;
-    margin-top: -44px;
+    #soMeIkoner {
+        margin-left: 120px;
+        margin-top: -44px;
 
-}
-
-    .wrapper{
-    position: absolute;
-    top: 3%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-    .input{
-    width: 80px;
-    height: 2.5px;
-    border: 2px solid white;
-
-
-}
+    }
 
 
 
-.luk-btn{
-
-    top: 30px;
-    right: 70px;
-
-}
-
-}
-
-@media screen and (min-width:627px){
-    #soMeIkoner{
-    margin-left: 10px;
-    margin-top: -44px;
-
-}
-       .wrapper{
-    position: absolute;
-    top: 3.4%;
-    left: 51.5%;
-    transform: translate(-50%, -50%);
-           opacity: 1;
-}
-    .input{
-    width: 130px;
-    height: 15px;
-    border: 2px solid white;
-    text-transform: uppercase;
-
-
-}
-
-
-
-.luk-btn{
-
-    top: 36px;
-    right: 80px;
-
-}
-
-    #footer{
+    #footer {
         flex-direction: row;
         justify-content: space-between;
         text-align: left;
@@ -318,120 +270,127 @@ footer{
         margin-right: 2vw;
     }
 
-    #persondata{
+    #persondata {
         flex-basis: 200px;
     }
 
-    #sponsorer{
+    #sponsorer {
         flex-basis: 200px;
     }
 
-    #kontakt{
+    #kontakt {
         flex-basis: 200px;
     }
 
-    #adresse{
+    #adresse {
         flex-basis: 200px;
     }
 
-    #soMeIkoner{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    position: relative;
+    #soMeIkoner {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        position: relative;
         margin-left: 100px;
         margin-top: -40.5px;
 
-}
-}
-
-@media screen and (min-width: 715px){
-
-       .wrapper{
-    position: absolute;
-    top: 3.5%;
-    left: 54%;
-    transform: translate(-50%, -50%);
-}
-    .input{
-    width: 130px;
-    height: 20px;
-    border: 3px solid white;
-    text-transform: uppercase;
-
+    }
 }
 
-.luk-btn{
-
-    top: 40px;
-    right: 80px;
-
+@media screen and (min-width: 627px){
+    .wrapper{
+        opacity: 1;
+    }
 }
-    #persondata{
+
+@media screen and (min-width: 715px) {
+
+    #persondata {
         flex-basis: 470px;
     }
 
-    #sponsorer{
+    #sponsorer {
         flex-basis: 200px;
     }
 
-    #kontakt{
+    #kontakt {
         flex-basis: 200px;
     }
 
-    #adresse{
+    #adresse {
         flex-basis: 100px;
     }
 }
 
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 1024px) {
 
-       .wrapper{
-    position: absolute;
-    top: 4.1%;
-    left: 54%;
-    transform: translate(-50%, -50%);
-}
-    .input{
-    width: 200px;
-    height: 30px;
-    border: 3px solid white;
-    text-transform: uppercase;
-
-}
-
-.luk-btn{
-
-    top: 44px;
-    right: 90px;
-
-}
-#footer{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-left: 2vw;
-    margin-right: 2vw;
-    text-align: left;
+    .wrapper {
 
 
-}
-    #persondata{
+        left: 50%;
+
+    }
+    .input {
+        width: 200px;
+        height: 20px;
+        border: 3px solid white;
+        text-transform: uppercase;
+
+    }
+
+    .luk-btn {
+
+        top: 40px;
+        right: 90px;
+
+    }
+
+    #soMeIkoner {
+        left: 10%
+    }
+    #footer {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 2vw;
+        margin-right: 2vw;
+        text-align: left;
+
+
+    }
+    #persondata {
         flex-basis: 20px;
     }
 
-    #sponsorer{
+    #sponsorer {
         flex-basis: 20px;
     }
 
-    #kontakt{
+    #kontakt {
         flex-basis: 180px;
     }
 
-    #adresse{
+    #adresse {
         flex-basis: 170px;
     }
 
 
+}
+
+@media screen and (min-width:1300px) {
+    #soMeIkoner {
+        font-size: 1.5vw;
+        left: 15%
+    }
+}
+
+@media screen and (min-width:1500px) {
+    .wrapper {
+        top: 3vw;
+    }
+
+    .input {
+        width: 250px;
+    }
 }
