@@ -8,10 +8,10 @@ body {
 
 #txt {
     border: 3px solid white;
-    margin: 8vw;
+    margin: 10vw 13vw 4vw 13vw;
     padding: 4vw;
     color: white;
-    margin-top: 15vw;
+
 }
 
 .timeline p{
@@ -106,7 +106,7 @@ body {
 
 
 .content {
-    padding: 10px 20px;
+    padding: 10px 30px;
     background-color: white;
     position: relative;
     border-radius: 6px;
@@ -143,4 +143,11 @@ body {
   .right {
     left: 0%;
   }
+}
+
+@media screen and (max-width:1024){
+    #txt{
+        margin-right: 8vw;
+        margin-left: 8vw;
+    }
 }
