@@ -35,6 +35,8 @@ h1, h2, h3, h4, h5, p, a{
 #mySidenav {
   background-image: url(wall.png);
   padding-top: 20px;
+    position: absolute;
+    z-index: 3;
 }
 
 #mySidenav a, .dropdown-btn {
@@ -135,6 +137,8 @@ i{
     flex-direction: row;
     margin-left: 110px;
     margin-top: -44px;
+    position: relative;
+    z-index: 2;
 
 }
 .soMe{
