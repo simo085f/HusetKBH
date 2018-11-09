@@ -16,23 +16,29 @@
 
     main {
         margin: 8vw;
-        padding: 4vw;
         color: white;
         margin-top: 15vw;
     }
 
-    .events {
-        padding: 4vw;
+    .faciliteter {
         color: white;
         font-family: Avenir;
+
     }
 
-    .event_container {
+    .faciliteter_container {
         border: 3px solid white;
-        margin-bottom: 4vw;
-        /*  display: grid;
+        padding: 4vw;
+        /* display: grid;
         grid-template-columns: 10px repeat(2, 1fr) 10px;
         grid-template-rows: 10px repeat(6, 1fr) 10px;*/
+    }
+
+    .faciliteter_template {
+        display: grid;
+        grid-template-columns: repeat (3, 1fr);
+        grid-template-rows: repeat (6, 1fr);
+
     }
 
     .title {
@@ -121,12 +127,17 @@
 
     }
 
-    /*
-@media screen and (min-width:768px){
-.events{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
 
-}
-}
-*/
+    @media screen and (min-width:768px) {
+        .faciliteter {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+
+
+        }
+    }
+
+    @media screen and (min-width:1024px) {
+        .faciliteter {}
+    }
