@@ -163,56 +163,79 @@ h2{
 
 /*-------------------------------------------*/
 
-#logo img{
+a {
+
+    color: white;
+}
+
+
+
+#logo img {
     width: 30vw;
     float: right;
 
 }
 
-h3, h4, h5, p, a{
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a {
     font-family: 'Avenir', sans-serif;
 }
 
+/* navigation */
+
 #mySidenav {
-  background-image: url(wall.png);
-  padding-top: 20px;
+    background-image: url(wall.png);
+    padding-top: 20px;
+    position: absolute;
+    z-index: 3;
 }
 
-#mySidenav a, .dropdown-btn {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 20px;
-  color: white;
-  border: none;
-  background: none;
-  width:100%;
-  text-align: left;
-  cursor: pointer;
-  outline: none;
+#mySidenav a,
+.dropdown-btn {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
 }
 
 
-#mySidenav a:hover, .dropdown-btn:hover {
-  color: #f1f1f1;
+#mySidenav a:hover,
+.dropdown-btn:hover {
+    color: #f1f1f1;
 }
 
 .active {
-  color: white;
+    color: white;
+    opacity: 0.5;
 }
 
 
 .dropdown-container {
-  display: none;
-  background-image: url(wall.png);
-  padding-left: 8px;
+    display: none;
+    background-image: url(wall.png);
+    padding-left: 8px;
 }
 
 .fa-caret-down {
-  float: right;
-  padding-right: 8px;
+    float: right;
+    padding-right: 8px;
+    position: relative;
+    z-index: 4;
 
 
 }
+
 
 .sidenav {
     height: 100%;
@@ -240,10 +263,207 @@ h3, h4, h5, p, a{
 }
 
 
-#main {
-    transition: margin-left .5s;
-    padding: 20px;
+
+
+.dropdown-btn {
+    padding: 0px;
+    position: relative;
+    z-index: 2;
+    display: flex;
+
 }
+
+i {
+    margin-top: 10px;
+
+}
+
+/* soMe ikoner*/
+
+#soMeIkoner {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: 110px;
+    margin-top: -44px;
+    position: relative;
+    z-index: 2;
+
+}
+
+.soMe {
+    color: white;
+    margin: 6px;
+
+}
+
+.soMe a {
+    color: white;
+}
+
+/* søgefunktion*/
+
+.wrapper {
+    position: absolute;
+    top: 3.5vw;
+    left: 51%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.search_container {
+    position: relative;
+    padding: 30.5px 60px;
+
+}
+
+.input {
+    width: 100px;
+    height: 4px;
+    border: 1.5px solid white;
+    background: transparent;
+    padding: 10px 30px;
+    border-radius: 50px;
+    outline: none;
+    color: white;
+    letter-spacing: 1px;
+    font-family: 'Avenir', sans-serif;
+
+
+}
+
+::-webkit-input-placeholder {
+    color: white;
+    letter-spacing: 1px;
+    font-size: 15px;
+    font-family: 'Avenir', sans-serif;
+
+}
+
+.luk-btn {
+    position: absolute;
+    z-index: ;
+    top: 30px;
+    right: 70px;
+    font-size: 25px;
+    cursor: pointer;
+    color: white;
+    transition: opacity 0.5s ease;
+
+    opacity: 1;
+    /*skal være på 0 hvis animationen skal du*/
+}
+
+.luk-btn.active {
+    opacity: 1;
+    animation-name: animate;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    color: white;
+}
+
+@keyframes animate {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.2);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    75% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+@media screen and (min-width:400px) {
+
+    #soMeIkoner {
+        margin-left: 120px;
+        margin-top: -44px;
+
+    }
+
+
+    #soMeIkoner {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        position: relative;
+        margin-left: 100px;
+        margin-top: -40.5px;
+
+    }
+}
+
+@media screen and (min-width: 627px){
+    .wrapper{
+        opacity: 1;
+    }
+
+    #logo img{
+        width: 25vw;
+    }
+}
+
+
+
+@media screen and (min-width: 1024px) {
+
+
+    .wrapper {
+
+
+        left: 50%;
+
+    }
+    .input {
+        width: 200px;
+        height: 20px;
+        border: 3px solid white;
+        text-transform: uppercase;
+
+    }
+
+    .luk-btn {
+
+        top: 40px;
+        right: 90px;
+
+    }
+
+    #soMeIkoner {
+        left: 10%
+    }
+
+
+
+}
+
+@media screen and (min-width:1300px) {
+    #soMeIkoner {
+        font-size: 1.5vw;
+        left: 15%
+    }
+}
+
+@media screen and (min-width:1500px) {
+    .wrapper {
+        top: 3vw;
+        left: 55%
+    }
+
+    .input {
+        width: 250px;
+    }
+}
+
 
 /*-----------------------------------------*/
 
