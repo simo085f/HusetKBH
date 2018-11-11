@@ -89,6 +89,7 @@
         function visEvents() {
             console.log("visEvents" + eventFilter);
 
+            allEvents.reverse();
             allEvents.forEach(event => {
 
                 if (eventFilter == event.acf.genre) {

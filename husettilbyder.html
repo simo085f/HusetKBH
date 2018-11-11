@@ -3,59 +3,60 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="husettilbyder.css" type="text/css">
     <title></title>
 </head>
 
 <body>
-   <header></header>
+    <header></header>
 
     <main>
 
-<!--       Section til overskift + info-->
+        <!--       Section til overskift + info-->
         <section class="container" data-container></section>
         <template data-template>
             <article class="introListview">
-             <h2 data-title></h2>
-             <p data-text></p>
-             </article>
-         </template>
-
-<!--         Section til billede af bliv frivillig-->
-         <section class="container1" data-container1></section>
+                <h2 class="title" data-title></h2>
+                <p class="paragraf" data-text></p>
+            </article>
+        </template>
+<div class="billeder">
+        <!--         Section til billede af bliv frivillig-->
+        <section class="container1" data-container1></section>
         <template data-template1>
             <article class="voluntaryListview">
-                <h2 data-title1></h2>
-                <img class="image" src="" alt="">
+                <h2 class="title1" data-title1></h2>
+                <img class="image1" src="" alt="">
             </article>
         </template>
 
-<!--       Section til  billede af faciliteter-->
+        <!--       Section til  billede af faciliteter-->
         <section class="container2" data-container2></section>
         <template data-template2>
             <article class="faciliteterListview">
-                <h2 data-title2></h2>
+                <h2 class="title2" data-title2></h2>
                 <img class="image2" src="" alt="">
             </article>
         </template>
 
-<!--        section til billede af book lokale-->
+        <!--        section til billede af book lokale-->
         <section class="container3" data-container3></section>
         <template data-template3>
             <article class="bookListview">
-                <h2 data-title3></h2>
-                <p data-text3></p>
+                <h2 class="title3" data-title3></h2>
+                <img class="image3" src="" alt="">
             </article>
         </template>
 
-    <!--        section til billede af skab events-->
+        <!--        section til billede af skab events-->
         <section class="container4" data-container4></section>
         <template data-template4>
             <article class="skabListview">
-                <h2 data-title4></h2>
-                <p data-text4></p>
+                <h2 class="title4" data-title4></h2>
+                <img class="image4" src="" alt="">
             </article>
         </template>
-
+</div>
     </main>
 
 </body>
@@ -74,8 +75,16 @@
     let faciliteterTemplate = document.querySelector("[data-template2]");
     let faciliteterContainer = document.querySelector("[data-container2]");
 
+    let book;
+    let bookTemplate = document.querySelector("[data-template3]");
+    let bookContainer = document.querySelector("[data-container3]");
+
+    let skab;
+    let skabTemplate = document.querySelector("[data-template4]");
+    let skabContainer = document.querySelector("[data-container4]");
+
     //------------------------------------------------
-    async function getJSON(){
+    async function getJSON() {
         let jsonData = await fetch("http://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/huset_tilbyder?slug=text_tilbyder");
         intro = await jsonData.json();
         visIntro();
@@ -88,14 +97,24 @@
 
         let jsonData2 = await fetch("http://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/huset_tilbyder?slug=tilbyder_faciliteter");
         faciliteter = await jsonData2.json();
-        visFaciliteter;
+        visFaciliteter();
         console.log(faciliteter);
+
+        let jsonData3 = await fetch("http://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/huset_tilbyder?slug=tilbyder_book");
+        book = await jsonData3.json();
+        visBook();
+        console.log(book);
+
+        let jsonData4 = await fetch("http://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/huset_tilbyder?slug=tilbyder_skab_events");
+        skab = await jsonData4.json();
+        visSkab();
+        console.log(skab);
     }
 
     //------------------------------------------------
-    function visIntro(){
+    function visIntro() {
         console.log(intro);
-        intro.forEach(intro =>{
+        intro.forEach(intro => {
             let klon = introTemplate.cloneNode(true).content;
             klon.querySelector("[data-title]").textContent = intro.title.rendered;
             klon.querySelector("[data-text]").innerHTML = intro.content.rendered;
@@ -103,23 +122,43 @@
         })
     }
 
-    function visVoluntary(){
+    function visVoluntary() {
         console.log(voluntary);
-        voluntary.forEach(voluntary=>{
-        let klon = voluntaryTemplate.cloneNode(true).content;
-        klon.querySelector("[data-title1]").textContent = voluntary.title.rendered;
-        klon.querySelector(".image").src = voluntary.acf.image;
-        voluntaryContainer.appendChild(klon);
-            })
+        voluntary.forEach(voluntary => {
+            let klon = voluntaryTemplate.cloneNode(true).content;
+            klon.querySelector("[data-title1]").textContent = voluntary.title.rendered;
+            klon.querySelector(".image1").src = voluntary.acf.image;
+            voluntaryContainer.appendChild(klon);
+        })
     }
 
-    function visFaciliteter(){
+    function visFaciliteter() {
         console.log(faciliteter);
-        faciliteter.forEach(faciliteter=>{
+        faciliteter.forEach(faciliteter => {
             let klon = faciliteterTemplate.cloneNode(true).content;
             klon.querySelector("[data-title2]").textContent = faciliteter.title.rendered;
             klon.querySelector(".image2").src = faciliteter.acf.image;
             faciliteterContainer.appendChild(klon);
+        })
+    }
+
+    function visBook() {
+        console.log(book);
+        book.forEach(book => {
+            let klon = bookTemplate.cloneNode(true).content;
+            klon.querySelector("[data-title3]").textContent = book.title.rendered;
+            klon.querySelector(".image3").src = book.acf.image;
+            bookContainer.appendChild(klon);
+        })
+    }
+
+    function visSkab(){
+        console.log(skab);
+        skab.forEach(skab=>{
+            let klon = skabTemplate.cloneNode(true).content;
+            klon.querySelector("[data-title4]").textContent = skab.title.rendered;
+            klon.querySelector(".image4").src = skab.acf.image;
+            skabContainer.appendChild(klon);
         })
     }
 </script>
