@@ -18,7 +18,50 @@
              <p data-text></p>
              </article>
          </template>
+        <form>
+            <h2>Ansøgningsskema:</h2>
+            <input id="navn" type="text" placeholder="Fornavn" required>
+            <input id="navn" type="text" placeholder="Efternavn" required>
+            <input id="email" type="Email" placeholder="Din email" required>
+            <input id="tlf" type="Tlf" placeholder="Dit telefonummer" required>
+            <textarea id="besked" type="text" placeholder="Fortæl os lidt om din motivation:" required></textarea>
+            <input type="submit" value="Send"> <br>
+        </form>
 
+        <style>
+            form {
+                width: "100%";
+                background-color: darkgrey;
+                padding: 2%;
+            }
+
+            input {
+                width: 40%;
+                border: solid 2px white;
+                padding: 2%;
+                margin: 2%;
+                font-size: 1.5em;
+            }
+
+            textarea {
+                width: 95%;
+                height: 200px;
+            }
+
+            input [type=submit] {
+                width: 120px;
+                background-color: aqua;
+                color: bisque;
+            }
+
+            /*input[type=email]:focus {
+                background-color: grey;
+            }
+
+            input [type=besked]:hover {
+                background-color: grey;
+            }*/
+        </style>
 
 
     </main>
