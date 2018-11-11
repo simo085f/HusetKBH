@@ -111,7 +111,22 @@
                     klon.querySelector(".title").textContent = event.title.rendered;
                     klon.querySelector(".image").src = event.acf.image;
 
+                    klon.querySelector(".title").addEventListener("click", () => {
+                        visModal(event);
+                    })
                     klon.querySelector(".image").addEventListener("click", () => {
+                        visModal(event);
+                    })
+                    klon.querySelector(".date").addEventListener("click", () => {
+                        visModal(event);
+                    })
+                    klon.querySelector(".place").addEventListener("click", () => {
+                        visModal(event);
+                    })
+                    klon.querySelector(".pris").addEventListener("click", () => {
+                        visModal(event);
+                    })
+                    klon.querySelector(".time").addEventListener("click", () => {
                         visModal(event);
                     })
 
