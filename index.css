@@ -23,6 +23,7 @@ main{
 @media screen and (min-width:1000px){
     main{
         margin: 16vw;
+        margin-top: 8vw;
         display: grid;
         grid-template-columns: repeat (3, 1fr);
         grid-template-rows: repeat (5, 1fr);
@@ -159,6 +160,8 @@ h2{
     z-index: 1;
     opacity: 0.6;
 }
+
+
 
 /*-------------------------------------------*/
 
