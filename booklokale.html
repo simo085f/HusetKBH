@@ -3,13 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
     <title>Events</title>
     <link rel="stylesheet" href="booklokale.css" type="text/css">
-=======
-    <link rel="stylesheet" href="booklokale.css" type="text/css">
-    <title></title>
->>>>>>> origin/master
 </head>
 
 <body>
@@ -18,8 +13,6 @@
     <main>
 
 
-<<<<<<< HEAD
-=======
 
         <section class="events"></section>
 
@@ -31,7 +24,6 @@
             </article>
         </template>
 
->>>>>>> origin/master
     </main>
 
     <script>
@@ -44,7 +36,7 @@
         eventFilter = "alle";
 
         async function getJson() {
-            let jsonObject = await fetch("http://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/book_lokale/?per_page=100");
+            let jsonObject = await fetch("https://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/book_lokale/?per_page=100");
             allEvents = await jsonObject.json();
             console.log(allEvents);
             visEvents();

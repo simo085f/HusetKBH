@@ -9,6 +9,15 @@
 </head>
 
 <body>
+
+    <template class="blivfrivillig_template">
+            <article class="container">
+               <div class="tekst"></div>
+                <div class="skema"></div>
+
+            </article>
+        </template>
+
     <header>Huset nav</header>
     <main>
         <section class="container" data-container></section>
@@ -73,7 +82,7 @@
     let postTemplate = document.querySelector("[data-template]");
     let postContainer = document.querySelector("[data-container]");
     async function getJSON() {
-        let jsonData = await fetch("http://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/bliv_frivillig");
+        let jsonData = await fetch("https://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/bliv_frivillig");
         posts = await jsonData.json();
         visPosts();
     }
