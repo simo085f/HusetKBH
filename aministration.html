@@ -99,32 +99,32 @@
 
         //-----------------------------------------------
         async function getJSON() {
-            let jsonData = await fetch("http://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/administration?slug=pr");
+            let jsonData = await fetch("https://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/administration?slug=pr");
             pr = await jsonData.json();
             visPr();
             console.log(pr);
 
-            let jsonData1 = await fetch("http://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/administration?slug=booking");
+            let jsonData1 = await fetch("https://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/administration?slug=booking");
             booking = await jsonData1.json();
             visBooking();
             console.log(booking);
 
-            let jsonData2 = await fetch("http://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/administration?slug=bar");
+            let jsonData2 = await fetch("https://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/administration?slug=bar");
             bar = await jsonData2.json();
             visBar();
             console.log(bar);
 
-            let jsonData3 = await fetch("http://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/administration?slug=drift");
+            let jsonData3 = await fetch("https://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/administration?slug=drift");
             drift = await jsonData3.json();
             visDrift();
             console.log(drift);
 
-            let jsonData4 = await fetch("http://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/administration?slug=administration");
+            let jsonData4 = await fetch("https://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/administration?slug=administration");
             admin = await jsonData4.json();
             visAdmin();
             console.log(admin);
 
-            let jsonData5 = await fetch("http://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/administration?slug=ledelse");
+            let jsonData5 = await fetch("https://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/administration?slug=ledelse");
             ledelse = await jsonData5.json();
             visLedelse();
             console.log(ledelse);

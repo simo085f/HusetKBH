@@ -26,7 +26,7 @@
        let postContainer = document.querySelector("[data-container]");
 
 async function getJSON(){
-    let jsonData = await fetch("http://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/pages?slug=kontakt");
+    let jsonData = await fetch("https://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/pages?slug=kontakt");
     posts = await jsonData.json();
     visPosts();
 }
