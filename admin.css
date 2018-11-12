@@ -4,11 +4,7 @@ body{
 }
 
 main{
-    border: 3px solid white;
-    margin: 8vw;
-    padding: 4vw;
-    color: white;
-    margin-top: 15vw;
+
 }
 
 #logo img{
@@ -18,91 +14,7 @@ main{
 
 h1, h2, h3, h4, h5, p, a{
     font-family: 'Avenir', sans-serif;
-}
-
-ul, li a{
-    list-style: none;
     color: white;
-    text-decoration: none;
-
-}
-
-li a:hover{
-    text-decoration: underline;
-
-}
-
-header {
-    position: fixed;
-    top: 0px;
-    display: flex;
-    width: 100%;
-    border-bottom: 1px solid white;
-    background-image: url(wall.png);
-    margin-right: 2vw;
-
-
-}
-
-nav {
-    height: 60px;
-    width: 100%;
-
-
-}
-
-nav ul{
-     display: flex;
-
-}
-
-nav ul li {
-    float: left;
-    list-style: none;
-    position: relative;
-    margin-right: 3vw;
-
-
-}
-
-nav ul li a {
-
-
-
-
-
-}
-
-nav ul li ul {
-    display: none;
-    position: absolute;
-   background-image: url(wall.png);
-    padding: 4px;
-    text-align: left;
-
-}
-
-nav ul li ul li a {
-
-
-}
-
-nav ul li ul li {
-    padding-bottom: 6px;
-
-
-
-}
-
-nav ul li ul li a:hover {
-
-
-}
-
-nav ul li:hover ul {
-    display: block;
-    width: 150px;
-
 }
 
 a {
@@ -112,3 +24,118 @@ a {
     text-decoration: underline;
 
 }
+main{
+
+ display: grid;
+        grid-template-columns: repeat (3, 1fr);
+        grid-template-rows: repeat (5, 1fr);
+        grid-gap: 20px;
+
+    }
+.container{
+     border: 3px solid white;
+    margin-left: 8vw;
+    margin-right: 8vw;
+    padding: 4vw;
+    color: white;
+
+
+}
+
+.container1{
+     border: 3px solid white;
+    margin-left: 8vw;
+    margin-right: 8vw;
+    padding: 4vw;
+    color: white;
+
+
+
+}
+.container2{
+     border: 3px solid white;
+    margin-left: 8vw;
+    margin-right: 8vw;
+    padding: 4vw;
+    color: white;
+
+}
+
+
+.container3{
+     border: 3px solid white;
+    margin-left: 8vw;
+    margin-right: 8vw;
+    padding: 4vw;
+    color: white;
+
+}
+
+
+.container4{
+     border: 3px solid white;
+    margin-left: 8vw;
+    margin-right: 8vw;
+    padding: 4vw;
+    color: white;
+
+}
+
+.container5{
+     border: 3px solid white;
+    margin-left: 8vw;
+    margin-right: 8vw;
+    padding: 4vw;
+    color: white;
+
+}
+
+
+@media screen and (min-width:768px){
+
+
+main{
+    margin-left: 16vw;
+    margin-right: 16vw;
+ display: grid;
+        grid-template-columns: repeat (3, 1fr);
+        grid-template-rows: repeat (5, 1fr);
+        grid-gap: 20px;
+    justify-content: center;
+    }
+
+    .container{
+        grid-column: 1/3;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .container1{
+        grid-column: 2/3;
+        grid-row: 2/3;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .container2{
+        margin-left: 0;
+        margin-right: 0;
+    }
+  .container3{
+      margin-left: 0;
+        margin-right: 0;
+    }
+
+    .container4{
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .container5{
+        grid-column: 1/3;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+}
+
