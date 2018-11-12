@@ -71,7 +71,6 @@ main{
 }
 
 .container3{
-    border: 3px solid white;
     padding: 4vw;
     color: white;
     font-family: Avenir;
@@ -96,6 +95,7 @@ h2{
     display: grid;
     grid-template-columns: 10px repeat(2, 1fr) 10px;
     grid-template-rows: 10px repeat(6, 1fr) 10px;
+    border: 3px solid white;
 }
 
 .title{
@@ -557,6 +557,69 @@ i {
 
     .input {
         width: 250px;
+    }
+}
+
+@media screen and (min-width:768px){
+    .container3{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+}
+    .title{
+        font-size: 2vw;
+    }
+
+    .date{
+        font-size: 2vw;
+    }
+
+    .time{
+        font-size: 2vw;
+    }
+
+    .place{
+        font-size: 1.5vw;
+    }
+
+    .pris{
+        font-size: 2vw;
+    }
+
+    .kob_knap{
+        width: 16vw;
+        font-size: 2vw;
+    }
+
+}
+
+@media screen and (min-width:1024px){
+    .container3{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+    .title{
+        font-size: 1vw;
+    }
+
+    .date{
+        font-size: 1.5vw;
+    }
+
+    .time{
+        font-size: 1vw;
+    }
+
+    .place{
+        font-size: 1vw;
+    }
+
+    .pris{
+        font-size: 1.5vw;
+    }
+
+    .kob_knap{
+        width: 8vw;
+        font-size: 1vw;
     }
 }
 
