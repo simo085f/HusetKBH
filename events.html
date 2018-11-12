@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Events</title>
     <link rel="stylesheet" href="events.css" type="text/css">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.4.2/css/all.css' integrity='sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns' crossorigin='anonymous'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -89,6 +91,7 @@
         function visEvents() {
             console.log("visEvents" + eventFilter);
 
+            allEvents.reverse();
             allEvents.forEach(event => {
 
                 if (eventFilter == event.acf.genre) {
@@ -98,6 +101,9 @@
                 }
 
                 function udskriv() {
+
+
+
 
                     let klon = eventTarget.cloneNode(true).content;
 
@@ -110,7 +116,23 @@
                     klon.querySelector(".title").textContent = event.title.rendered;
                     klon.querySelector(".image").src = event.acf.image;
 
+                    klon.querySelector(".title").addEventListener("click", () => {
+
+                        visModal(event);
+                    })
                     klon.querySelector(".image").addEventListener("click", () => {
+                        visModal(event);
+                    })
+                    klon.querySelector(".date").addEventListener("click", () => {
+                        visModal(event);
+                    })
+                    klon.querySelector(".place").addEventListener("click", () => {
+                        visModal(event);
+                    })
+                    klon.querySelector(".pris").addEventListener("click", () => {
+                        visModal(event);
+                    })
+                    klon.querySelector(".time").addEventListener("click", () => {
                         visModal(event);
                     })
 
