@@ -1,3 +1,8 @@
+@font-face {
+        font-family: "Huset";
+        src: url("Huset Regular/huset Regular.otf");
+    }
+
 body{
     margin: 0;
     background-image: url(wall.png);
@@ -11,6 +16,10 @@ main{
     margin-top: 15vw;
 }
 
+article h2{
+    font-family: Huset;
+    font-size: 2em;
+}
 #logo img{
     width: 30vw;
 
