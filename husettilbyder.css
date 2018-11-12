@@ -1,1 +1,240 @@
+@font-face {
+        font-family: "Huset";
+        src: url("Huset Regular/huset Regular.otf");
+    }
+
+body{
+    margin: 0;
+    background-image: url(wall.png);
+}
+
+img{
+    width: 100%;
+}
+
+main{
+    margin: 8vw;
+    padding: 4vw;
+    color: white;
+}
+
+.title{
+    font-family: huset;
+    font-size: 10vw;
+}
+
+.introListview{
+    border: 3px solid white;
+    padding: 4vw;
+    padding-top: 0;
+    margin-bottom: 4vw;
+}
+.paragraf{
+    font-family: avenir;
+}
+
+.voluntaryListview{
+    border: 3px solid white;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.title1{
+    font-family: huset;
+    text-align: center;
+    font-size: 7vw;
+    padding-top: 3vw;
+    background-color: #22293B;
+    grid-column: 1 / 2;
+    grid-row: 2 /3;
+    z-index: 2;
+}
+
+.title1:hover{
+    grid-row: 1/4;
+    padding-top: 28vw;
+}
+
+.image1{
+    opacity: 0.7;
+    grid-column: 1/2;
+    grid-row: 1/4;
+    z-index: 1;
+}
+
+.faciliteterListview{
+    border: 3px solid white;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.title2{
+    font-family: huset;
+    text-align: center;
+    font-size: 7vw;
+    padding-top: 3vw;
+    background-color: #22293B;
+    grid-column: 1 / 2;
+    grid-row: 2 /3;
+    z-index: 2;
+}
+
+.title2:hover{
+    grid-row: 1/4;
+    padding-top: 28vw;
+}
+
+.image2{
+    opacity: 0.7;
+    grid-column: 1/2;
+    grid-row: 1/4;
+    z-index: 1;
+}
+
+.bookListview{
+    border: 3px solid white;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.title3{
+    font-family: huset;
+    text-align: center;
+    font-size: 7vw;
+    padding-top: 3vw;
+    background-color: #22293B;
+    grid-column: 1 / 2;
+    grid-row: 2 /3;
+    z-index: 2;
+}
+
+.title3:hover{
+    grid-row: 1/4;
+    padding-top: 28vw;
+}
+
+.image3{
+    opacity: 0.7;
+    grid-column: 1/2;
+    grid-row: 1/4;
+    z-index: 1;
+}
+
+.skabListview{
+    border: 3px solid white;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.title4{
+    font-family: huset;
+    text-align: center;
+    font-size: 7vw;
+    padding-top: 3vw;
+    background-color: #22293B;
+    grid-column: 1 / 2;
+    grid-row: 2 /3;
+    z-index: 2;
+}
+
+.title4:hover{
+    grid-row: 1/4;
+    padding-top: 28vw;
+}
+
+.image4{
+    opacity: 0.7;
+    grid-column: 1/2;
+    grid-row: 1/4;
+    z-index: 1;
+}
+
+.billeder{
+    display: grid;
+    grid-gap: 5vw;
+}
+
+@media screen and (min-width:768px){
+    .title{
+        font-size: 7vw;
+    }
+
+    .paragraf{
+        font-size: 2vw;
+    }
+
+    .billeder{
+        display: grid;
+        grid-template-columns: repeat (2, 1fr);
+        grid-template-rows: repeat (2, 1fr);
+    }
+
+    .container1{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    .container2{
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+
+    .container3{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    .container4{
+        grid-column: 2/3
+            grid-row: 2/3;
+    }
+
+    .title1{
+        font-size: 2vw;
+    }
+
+    .title1:hover{
+        padding-top: 14.4vw;
+    }
+
+    .title2{
+        font-size: 2vw;
+    }
+
+    .title2:hover{
+        padding-top: 14.4vw;
+    }
+
+    .title3{
+        font-size: 2vw;
+    }
+
+    .title3:hover{
+        padding-top: 14.4vw;
+    }
+
+    .title4{
+        font-size: 2vw;
+    }
+
+    .title4:hover{
+        padding-top: 14.4vw;
+    }
+}
+
+@media screen and (min-width:1100px){
+    .title{
+        font-size: 4vw;
+    }
+
+    .paragraf{
+        font-size: 1.5vw;
+    }
+}
+
+
 

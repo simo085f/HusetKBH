@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css" type="text/css">
-    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.4.2/css/all.css' integrity='sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns' crossorigin='anonymous'>
+   <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.4.2/css/all.css' integrity='sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns' crossorigin='anonymous'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Huset KBH</title>
 
@@ -15,7 +15,76 @@
     <!--   <?php include "header.html";?>-->
 
     <header>
+        <section id="logo">
+            <a href="index.html">
+            <img src="huset_neon.png" alt=logo>
+                </a>
+        </section>
+        <nav>
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="events.html">Events</a>
+                <button class="dropdown-btn"><a href="husettilbyder.html">Huset tilbyder</a>
+        <i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-container">
+                    <a href="blivfrivillig.html">Bliv frivillig</a>
+                    <a href="faciliteter.html">Faciliteter</a>
+                    <a href="booklokale.html">Book lokale</a>
+                    <a href="skabevents.html">Skab events</a>
+                </div>
+                <button class="dropdown-btn"><a href="om.html">Om</a>
+        <i class="fa fa-caret-down"></i>
+        </button>
+                <div class="dropdown-container">
+                    <a href="historie.html">Historie</a>
+                    <a href="arrangoere.html">Arrangører</a>
+                </div>
+                <button class="dropdown-btn"><a href="kontakt.html">Kontakt</a>
+         <i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-container">
+                    <a href="ledige.html">Ledige stillinger</a>
+                    <a href="generelle.html">Generelle spørgsmål</a>
+                    <a href="aministration.html">Administration</a>
+                </div>
 
+            </div>
+            <span onclick="openNav()"><i class="fa fa-navicon" style="font-size:35px;font-weight:10;margin-left: 2vw; margin-top: 1vw; color:white;"></i></span>
+
+        </nav>
+        <section id="SoMeSearch">
+            <section id="soMeIkoner">
+                <div class="soMe">
+                    <a href="https://twitter.com/HusetKBH" target="_blank">
+         <i class="fa fa-twitter"></i>
+         </a>
+                </div>
+
+                <div class="soMe">
+                    <a href="https://www.facebook.com/Huset.Koebenhavn" target="_blank">
+         <i class="fa fa-facebook"></i>
+         </a>
+                </div>
+
+                <div class="soMe">
+                    <a href="https://instagram.com/husetkbh" target="_blank">
+         <i class="fa fa-instagram"></i>
+         </a>
+                </div>
+
+                <div class="soMe">
+                    <a href="https://www.flickr.com/photos/135006755@N04/" target="_blank">
+         <i class="fa fa-flickr"></i>
+         </a>
+                </div>
+            </section>
+
+            <div class="wrapper">
+                <div class="search_container">
+                    <input type="text" class="input" placeholder="Søg...">
+                    <div class="luk-btn">&times;</div>
+                </div>
+            </div>
+        </section>
     </header>
 
     <main>
@@ -88,8 +157,11 @@
 
 
 <!-- husets nyeste evnts-->
+        <section class="nyeEvents">
+
+        <h3>HUSETS NYESTE EVENTS<img src="Huset_logo_22.png" alt="pil" ></h3></section>
+
         <section class="container3" data-container3>
-        <h1>HUSETS NYESTE EVENTS</h1>
         </section>
 
         <template class="template" data_template3>
@@ -133,22 +205,22 @@
 
         //-----------------------------------------------
         async function getJSON() {
-            let jsonData = await fetch("http://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/pages?slug=home-page");
+            let jsonData = await fetch("https://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/pages?slug=home-page");
             posts = await jsonData.json();
             visPosts();
             console.log(posts);
 
-            let jsonData1 = await fetch("http://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/home?slug=home-huset-kbh");
+            let jsonData1 = await fetch("https://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/home?slug=home-huset-kbh");
             intro = await jsonData1.json();
             visIntro();
             console.log(intro);
 
-            let jsonData2 = await fetch("http://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/home?slug=home-bliv-frivillig");
+            let jsonData2 = await fetch("https://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/home?slug=home-bliv-frivillig");
             voluntary = await jsonData2.json();
             visVoluntary();
             console.log(voluntary);
 
-            let jsonData3 = await fetch("http://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/events/?per_page=3");
+            let jsonData3 = await fetch("https://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/events/?per_page=3");
             events = await jsonData3.json();
             visEvents();
             console.log(events);
@@ -199,7 +271,44 @@
         }
 
         //_----------------------------------------------------
+//* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
 
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+        /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+        function openNav() {
+            document.querySelector("#mySidenav").style.width = "250px";
+            document.querySelector("main").style.marginLeft = "250px";
+        }
+
+        /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+        function closeNav() {
+            document.querySelector("#mySidenav").style.width = "0";
+            document.querySelector("main").style.marginLeft = "8vw";
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+
+
+            document.querySelector(".input").focus(function() {
+                document.querySelector(".luk-btn").addClass("active");
+            });
+
+            document.querySelector(".input").blur(function() {
+                document.querySelector(".luk-btn").removeClass("active");
+            });
+        });
 
 
         //--------------------------------------------------

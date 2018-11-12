@@ -181,7 +181,7 @@ Spisehuset Fair</p>
        let postContainer = document.querySelector("[data-container]");
 
 async function getJSON(){
-    let jsonData = await fetch("http://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/husets_historie");
+    let jsonData = await fetch("https://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/husets_historie");
     posts = await jsonData.json();
     visPosts();
 }

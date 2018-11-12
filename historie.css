@@ -1,3 +1,8 @@
+@font-face {
+        font-family: "Huset";
+        src: url("Huset Regular/huset Regular.otf");
+    }
+
 * {
     box-sizing: border-box;
 }
@@ -12,6 +17,11 @@ body {
     padding: 4vw;
     color: white;
 
+}
+
+h2{
+    font-family: Huset;
+    font-size: 2em;
 }
 
 .timeline p{
@@ -150,4 +160,8 @@ body {
         margin-right: 8vw;
         margin-left: 8vw;
     }
+
+    h2{
+    font-size: 2.5em;
+}
 }
