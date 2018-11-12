@@ -85,27 +85,27 @@
 
     //------------------------------------------------
     async function getJSON() {
-        let jsonData = await fetch("http://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/huset_tilbyder?slug=text_tilbyder");
+        let jsonData = await fetch("https://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/huset_tilbyder?slug=text_tilbyder");
         intro = await jsonData.json();
         visIntro();
         console.log(intro);
 
-        let jsonData1 = await fetch("http://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/huset_tilbyder?slug=tilbyder-bliv-frivillig");
+        let jsonData1 = await fetch("https://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/huset_tilbyder?slug=tilbyder-bliv-frivillig");
         voluntary = await jsonData1.json();
         visVoluntary();
         console.log(voluntary);
 
-        let jsonData2 = await fetch("http://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/huset_tilbyder?slug=tilbyder_faciliteter");
+        let jsonData2 = await fetch("https://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/huset_tilbyder?slug=tilbyder_faciliteter");
         faciliteter = await jsonData2.json();
         visFaciliteter();
         console.log(faciliteter);
 
-        let jsonData3 = await fetch("http://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/huset_tilbyder?slug=tilbyder_book");
+        let jsonData3 = await fetch("https://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/huset_tilbyder?slug=tilbyder_book");
         book = await jsonData3.json();
         visBook();
         console.log(book);
 
-        let jsonData4 = await fetch("http://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/huset_tilbyder?slug=tilbyder_skab_events");
+        let jsonData4 = await fetch("https://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/huset_tilbyder?slug=tilbyder_skab_events");
         skab = await jsonData4.json();
         visSkab();
         console.log(skab);
