@@ -71,7 +71,6 @@ main{
 }
 
 .container3{
-    padding: 4vw;
     color: white;
     font-family: Avenir;
     display: grid;
@@ -88,6 +87,11 @@ h2{
     font-family: Huset;
     font-size: 7.5vw;
     margin-top: 0;
+}
+
+h3{
+    font-family: huset;
+    font-size: 5vw;
 }
 
 .eventsListview{
