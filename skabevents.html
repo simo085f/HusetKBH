@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <header>Huset nav</header>
+
     <main>
         <section class="container" data-container></section>
         <template data-template>
@@ -30,7 +30,7 @@
     let postTemplate = document.querySelector("[data-template]");
     let postContainer = document.querySelector("[data-container]");
     async function getJSON() {
-        let jsonData = await fetch("http://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/skab_events");
+        let jsonData = await fetch("https://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/skab_events");
         posts = await jsonData.json();
         visPosts();
     }
