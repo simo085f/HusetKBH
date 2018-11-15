@@ -13,11 +13,19 @@ footer {
     text-align: center;
 }
 
+footer img{
+ height: 100%;
+}
+
+footer h2{
+    font-size: 1.5em;
+}
+
 .overskrift {
     font-weight: 600;
 }
 
-a{
+footer a{
     color: black;
 }
 

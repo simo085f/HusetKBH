@@ -3,17 +3,12 @@ body {
     background-image: url(wall.png);
 }
 
-main {
-    border: 3px solid white;
-    margin: 8vw;
-    padding: 4vw;
-    color: white;
-    margin-top: 15vw;
-}
 
-a {
+
+header a {
 
     color: white;
+    font-family: 'Avenir', sans-serif;
 }
 
 
@@ -24,13 +19,13 @@ a {
 
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-p,
-a {
+header h1,
+header h2,
+header h3,
+header h4,
+header h5,
+header p,
+ {
     font-family: 'Avenir', sans-serif;
 }
 
@@ -121,7 +116,7 @@ a {
 
 }
 
-i {
+header i {
     margin-top: 10px;
 
 }
