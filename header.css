@@ -32,7 +32,7 @@ header p,
 /* navigation */
 
 #mySidenav {
-    background-image: url(wall.png);
+    /*background-image: url(wall.png);*/
     padding-top: 20px;
     position: absolute;
     z-index: 3;
@@ -66,7 +66,7 @@ header p,
 
 .dropdown-container {
     display: none;
-    background-image: url(wall.png);
+    /*background-image: url(wall.png);*/
     padding-left: 8px;
 }
 
