@@ -8,23 +8,23 @@ body {
     width: 30%
 }
 
-/* The side navigation menu */
+/* Sidenavigation til mobilstørrelse */
 .sidenav {
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
     left: 0;
     background-image: url(wall.png);
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 0px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    overflow-x: hidden;
+    padding-top: 0px;
+    transition: 0.5s;
 }
 
 
 
-/* The navigation menu links */
+/* Links i navigationen */
 .sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
@@ -35,12 +35,9 @@ body {
 }
 
 
-
-/* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
     color: #f1f1f1;
 }
-
 
 
 #mySidenav a,
@@ -56,6 +53,7 @@ body {
     cursor: pointer;
     outline: none;
 }
+
 #mySidenav a:hover,
 .dropbtn:hover {
     color: #f1f1f1;
@@ -79,10 +77,6 @@ body {
     position: relative;
     z-index: 4;
 
-
-
-
-
 }
 .dropbtn {
     padding: 0px;
@@ -95,16 +89,11 @@ body {
 }
 
 
-
 .navbar{
     display: none;
 }
 
 
-
-
-
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
@@ -124,6 +113,9 @@ body {
     span{
         display: none;
     }
+
+    /* navigation til ipad og desktop*/
+
 .navbar {
     display: inline-block;
   overflow: hidden;
@@ -133,7 +125,7 @@ body {
 
 }
 
-/* Links inside the navbar */
+/* links i navigationen */
 .navbar a {
   float: left;
   font-size: 1.2em;
@@ -144,13 +136,13 @@ body {
     font-family: 'Avenir', sans-serif;
 }
 
-/* The dropdown container */
+
 .dropdown {
   float: left;
   overflow: hidden;
 }
 
-/* Dropdown button */
+
 .dropdown .dropbtn {
   font-size: 16px;
   border: none;
@@ -158,16 +150,16 @@ body {
   color: white;
   padding: 10px 10px;
   background-color: inherit;
-  font-family: inherit; /* Important for vertical align on mobile phones */
-  margin: 0; /* Important for vertical align on mobile phones */
+  font-family: inherit;
+  margin: 0;
 }
 
-/* Add a red background color to navbar links on hover */
+
 .navbar a:hover, .dropdown:hover .dropbtn {
   color: lightgrey;
 }
 
-/* Dropdown content (hidden by default) */
+
 .dropdown-content {
   display: none;
   position: absolute;
@@ -176,7 +168,7 @@ body {
   z-index: 1;
 }
 
-/* Links inside the dropdown */
+
 .dropdown-content a {
   float: none;
   color: white;
@@ -186,13 +178,13 @@ body {
   text-align: left;
 }
 
-/* Add a grey background color to dropdown links on hover */
 .dropdown-content a:hover {
     color: lightgray;
 
 }
 
-/* Show the dropdown menu on hover */
+    /* vis dropdown-content når man hover */
+
 .dropdown:hover .dropdown-content {
   display: block;
 
@@ -231,10 +223,8 @@ body {
         #soMeIkoner{
             display:block;
             margin-top: 10px;
-
-
-
         }
+
         #SoMeSearch{
             float: right;
             width: 180px;
