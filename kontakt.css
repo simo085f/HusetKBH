@@ -22,21 +22,11 @@ article h2{
 }
 
 
-h1, h2, h3, h4, h5, p, a{
+main p{
     font-family: 'Avenir', sans-serif;
 }
 
-ul, li a{
-    list-style: none;
-    color: white;
-    text-decoration: none;
 
-}
-
-li a:hover{
-    text-decoration: underline;
-
-}
 
 a {
     text-decoration: none;
