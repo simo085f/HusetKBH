@@ -12,6 +12,7 @@
 
 <body>
     <main>
+        <!--Template til indholdet der skal bruges i javascript når man skal indsætte elementerne fra json filen-->
         <section class="container" data-container></section>
         <template data-template>
             <article class="postListview">
@@ -25,26 +26,32 @@
 
 
     <script>
-        //Hent Json fil
+        //Hent json filen når DOM er loaded
         document.addEventListener("DOMContentLoaded", getJSON);
+
+        //Find DOM elementer
         let posts;
         let postTemplate = document.querySelector("[data-template]");
         let postContainer = document.querySelector("[data-container]");
 
         async function getJSON() {
+        //Hent Json filen
             let jsonData = await fetch("https://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/om");
             posts = await jsonData.json();
             visPosts();
         }
 
         function visPosts() {
-
             console.log(posts);
 
+            //Kør json filen igennem
             posts.forEach(post => {
+
+            //Lav en klon af template
                 let klon = postTemplate.cloneNode(true).content;
                 klon.querySelector("[data-title]").textContent = post.title.rendered;
                 klon.querySelector("[data-text]").innerHTML = post.content.rendered;
+                //Placer klon i html
                 postContainer.appendChild(klon);
 
 
@@ -52,44 +59,6 @@
             })
         }
 
-        //* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
-        var dropdown = document.getElementsByClassName("dropdown-btn");
-        var i;
-
-        for (i = 0; i < dropdown.length; i++) {
-            dropdown[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var dropdownContent = this.nextElementSibling;
-                if (dropdownContent.style.display === "block") {
-                    dropdownContent.style.display = "none";
-                } else {
-                    dropdownContent.style.display = "block";
-                }
-            });
-        }
-        /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
-        function openNav() {
-            document.querySelector("#mySidenav").style.width = "250px";
-            document.querySelector("main").style.marginLeft = "250px";
-        }
-
-        /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
-        function closeNav() {
-            document.querySelector("#mySidenav").style.width = "0";
-            document.querySelector("main").style.marginLeft = "8vw";
-        }
-
-        document.addEventListener("DOMContentLoaded", function() {
-
-
-            document.querySelector(".input").focus(function() {
-                document.querySelector(".luk-btn").addClass("active");
-            });
-
-            document.querySelector(".input").blur(function() {
-                document.querySelector(".luk-btn").removeClass("active");
-            });
-        });
     </script>
 </body>
 </html>
