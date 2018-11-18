@@ -3,7 +3,7 @@
         src: url("Huset Regular/huset Regular.otf");
     }
 
-/*styel af "main"*/
+/*style af "main"*/
 body{
     margin: 0;
     background-image: url(wall.png);
@@ -14,7 +14,7 @@ img{
 }
 
 .nyeEvents img{
-    width: 5%;
+    width: 8%;
     margin-left: 2px;
 }
 
@@ -99,25 +99,18 @@ main{
 }
 
 p{
-    font-family: Avenir;
+    font-family: 'Avenir', sans-serif;
 }
 
-h1{
-    font-family: Huset;
-    font-size: 7.5vw;
-    margin-top: 0;
-}
+
 
 h2{
     font-family: Huset;
-    font-size: 7.5vw;
+    font-size: 9vw;
     margin-top: 0;
 }
 
-h3{
-    font-family: huset;
-    font-size: 5vw;
-}
+
 
 /*Style til events boksene*/
 .eventsListview{

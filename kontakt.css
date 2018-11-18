@@ -16,19 +16,20 @@ main{
     margin-top: 15vw;
 }
 
-article h2{
+article h1{
     font-family: Huset;
-    font-size: 2em;
+    font-size: 30px;
 }
 
 
 main p{
     font-family: 'Avenir', sans-serif;
+    font-size: 16px;
 }
 
 
 
-a {
+main a {
     text-decoration: none;
     list-style: none;
     color: white;

@@ -1,6 +1,6 @@
-    @font-face {
+  @font-face {
         font-family: "Huset";
-        src: url("fonts/huset.otf");
+        src: url("Huset Regular/huset Regular.otf");
     }
 
     body {
@@ -8,11 +8,6 @@
         background-image: url(wall.png);
     }
 
-    .event_logo {
-        width: 50%;
-        margin: 4vw;
-        margin-bottom: 0;
-    }
 
     main {
         margin: 8vw;
@@ -32,9 +27,7 @@
         border: 3px solid white;
         margin-bottom: 4vw;
         padding: 4vw;
-        /*  display: grid;
-        grid-template-columns: 10px repeat(2, 1fr) 10px;
-        grid-template-rows: 10px repeat(6, 1fr) 10px;*/
+
     }
 
     .title {
@@ -44,78 +37,8 @@
         z-index: 2;
     }
 
-    .date {
-        font-family: Huset;
-        font-size: 8vw;
-        grid-column: 2/3;
-        grid-row: 3/4;
-        z-index: 2;
-    }
 
-    .kob_knap {
-        font-family: Avenir;
-        border: none;
-        font-size: 4vw;
-        padding: 2vw;
-        width: 40vw;
-    }
-
-    .kob_billet {
-        grid-column: 2/3;
-        grid-row: 7/8;
-        z-index: 2;
-    }
-
-    .time {
-        grid-column: 2/3;
-        grid-row: 4/5;
-        z-index: 2;
-        font-size: 4vw;
-    }
-
-    .place {
-        grid-column: 3/4;
-        grid-row: 3/4;
-        z-index: 2;
-        font-size: 4vw;
-    }
-
-    .pris {
-        grid-column: 3/4;
-        grid-row: 4/5;
-        z-index: 2;
-        font-size: 6vw;
-    }
-
-    .knapper {
-        padding: 4vw;
-        color: white;
-        text-align: center;
-    }
-
-    .menu_item {
-        font-family: Avenir;
-        border: none;
-        padding: 1vw;
-        font-size: 3vw;
-        background: none;
-        color: white;
-        border-bottom: 1px solid white;
-    }
-
-    .menu_item:hover {
-        color: gray;
-    }
-
-    .image {
-        width: 100%;
-        grid-column: 1/9;
-        grid-row: 1/9;
-        z-index: 1;
-        opacity: 0.6;
-    }
-
-    a {
+    main a {
         text-decoration: none;
         list-style: none;
         color: white;
@@ -123,12 +46,3 @@
 
     }
 
-    /*
-@media screen and (min-width:768px){
-.events{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-
-}
-}
-*/
