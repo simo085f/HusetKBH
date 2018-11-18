@@ -185,25 +185,34 @@
     </footer>
 
     <script>
+        //Event der gør at HTML loades før json loades
         document.addEventListener("DOMContentLoaded", getJSON);
+        //variabel til at styre hvad der skal vises i template
         let posts;
+        //variabler til at hente template og container fra html
         let postTemplate = document.querySelector("[data-template]");
         let postContainer = document.querySelector("[data-container]");
 
+        //variabel til at styre hvad der skal vises i template
         let intro;
+        //variabler til at hente template og container fra html
         let introTemplate = document.querySelector("[data-template1]");
         let introContainer = document.querySelector("[data-container1]");
 
+        //variabel til at styre hvad der skal vises i template
         let voluntary;
+        //variabler til at hente template og container fra html
         let voluntaryTemplate = document.querySelector("[data-template2]");
         let voluntaryContainer = document.querySelector("[data-container2]");
 
+        //variabel til at styre hvad der skal vises i template
         let events;
+        //variabler til at hente template og container fra html
         let eventTemplate = document.querySelector("[data_template3]");
         let eventContainer = document.querySelector("[data-container3]");
 
 
-        //-----------------------------------------------
+        //------------------------Hente json til de forskellige sections og templates---------------------
         async function getJSON() {
             let jsonData = await fetch("https://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/pages?slug=home-page");
             posts = await jsonData.json();
@@ -227,6 +236,7 @@
         }
 
         //----------------------------------------------
+        //function til at vise billedet
         function visPosts() {
             console.log(posts);
             posts.forEach(post => {
@@ -236,6 +246,7 @@
             })
         }
 
+        //function til at vise introduktion til huset
         function visIntro() {
             console.log(intro);
             intro.forEach(intro => {
@@ -246,6 +257,7 @@
             })
         }
 
+        //funtion til at vise bliv frivillig i huset
         function visVoluntary() {
             console.log(voluntary);
             voluntary.forEach(voluntary => {
@@ -256,6 +268,7 @@
             })
         }
 
+        //function til at vise de tre nyeste events fra event siden
         function visEvents() {
             console.log(events);
             events.forEach(events => {
@@ -313,6 +326,7 @@
 
         //--------------------------------------------------
 
+        //javascript til slideshow af billeder. Inspiration fra w3schools
          var slideIndex = 1;
 showSlides(slideIndex);
 

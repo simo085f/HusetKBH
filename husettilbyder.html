@@ -61,29 +61,40 @@
 
 </body>
 <script>
+    //Event der gør at HTML loades før json loades
     document.addEventListener("DOMContentLoaded", getJSON);
 
+    //variabel til at styre hvad der skal vises i template
     let intro;
+    //variabler til at hente template og container fra html
     let introTemplate = document.querySelector("[data-template]");
     let introContainer = document.querySelector("[data-container]");
 
+    //variabel til at styre hvad der skal vises i template
     let voluntary;
+    //variabler til at hente template og container fra html
     let voluntaryTemplate = document.querySelector("[data-template1]");
     let voluntaryContainer = document.querySelector("[data-container1]");
 
+    //variabel til at styre hvad der skal vises i template
     let faciliteter;
+    //variabler til at hente template og container fra html
     let faciliteterTemplate = document.querySelector("[data-template2]");
     let faciliteterContainer = document.querySelector("[data-container2]");
 
+    //variabel til at styre hvad der skal vises i template
     let book;
+    //variabler til at hente template og container fra html
     let bookTemplate = document.querySelector("[data-template3]");
     let bookContainer = document.querySelector("[data-container3]");
 
+    //variabel til at styre hvad der skal vises i template
     let skab;
+    //variabler til at hente template og container fra html
     let skabTemplate = document.querySelector("[data-template4]");
     let skabContainer = document.querySelector("[data-container4]");
 
-    //------------------------------------------------
+    //------------------------Hente json til de forskellige sections og templates---------------------
     async function getJSON() {
         let jsonData = await fetch("https://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/huset_tilbyder?slug=text_tilbyder");
         intro = await jsonData.json();
@@ -112,6 +123,7 @@
     }
 
     //------------------------------------------------
+    //function til at vise den føsrste text boks på siden
     function visIntro() {
         console.log(intro);
         intro.forEach(intro => {
@@ -122,6 +134,7 @@
         })
     }
 
+    //function til en af billedboksene på siden
     function visVoluntary() {
         console.log(voluntary);
         voluntary.forEach(voluntary => {
@@ -132,6 +145,7 @@
         })
     }
 
+    //function til en af billedboksene på siden
     function visFaciliteter() {
         console.log(faciliteter);
         faciliteter.forEach(faciliteter => {
@@ -142,6 +156,7 @@
         })
     }
 
+    //function til en af billedboksene på siden
     function visBook() {
         console.log(book);
         book.forEach(book => {
@@ -152,6 +167,7 @@
         })
     }
 
+    //function til en af billedboksene på siden
     function visSkab(){
         console.log(skab);
         skab.forEach(skab=>{

@@ -13,6 +13,7 @@
     <header></header>
 
     <main>
+<!--       Section til indhold af modale vinduet, når man trykker på et event-->
         <section id="modal">
             <div id="modal_content">
                 <button class="modal_close">X</button>
@@ -26,8 +27,10 @@
             </div>
         </section>
 
+<!--       Events logo der minder om husets eget logo-->
         <img class="event_logo" src="events_logo_white.png" alt="events_logo">
 
+<!--       section til sorteringsklapperne-->
         <section id="sorteringsknapper">
             <h1></h1>
             <div class="knapper">
@@ -40,6 +43,7 @@
             </div>
         </section>
 
+<!--        Template til event container. Det er hver af eventsene der er pakket ind i en event container-->
         <section class="events"></section>
 
         <template class="event_template">
@@ -58,16 +62,20 @@
     </main>
 
     <script>
+        //Event der gør at HTML loades før json loades
         document.addEventListener("DOMContentLoaded", getJson);
 
+        //variabel til at vise alle events
         let allEvents;
+        //variabler der henter template ned fra html
         let eventTarget = document.querySelector(".event_template");
         let eventOutPut = document.querySelector(".events");
 
         eventFilter = "alle";
-
+        //variabel til modal vindue section
         let modal = document.querySelector("#modal");
 
+        //henter json fra wordpress
         async function getJson() {
             let jsonObject = await fetch("https://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/events/?per_page=100");
             allEvents = await jsonObject.json();
@@ -75,36 +83,37 @@
             visEvents();
         }
 
+        //forEach loop til sortering af genre / sorteringsknapperne
         document.querySelectorAll(".menu_item").forEach(knap => {
             knap.addEventListener("click", filtrering);
         })
-
+        //funtion til filtrering
         function filtrering() {
-
 
             eventOutPut.textContent = "";
             eventFilter = this.getAttribute("data_kategori");
             visEvents();
 
         }
-
+        //function til at vise events
         function visEvents() {
             console.log("visEvents" + eventFilter);
 
+            //upsitedown fra wordpress
             allEvents.reverse();
             allEvents.forEach(event => {
-
+                //if statement til filtreringen
                 if (eventFilter == event.acf.genre) {
                     udskriv();
                 } else if (eventFilter == "alle") {
                     udskriv();
                 }
-
+                //udskrivningen når man trykker på en af filtreringsknapperne
                 function udskriv() {
 
 
 
-
+                    // indkaldelse af indholdet af hver event
                     let klon = eventTarget.cloneNode(true).content;
 
 
@@ -116,6 +125,7 @@
                     klon.querySelector(".title").textContent = event.title.rendered;
                     klon.querySelector(".image").src = event.acf.image;
 
+// når man klikker på følgende elementer går man videre til modal
                     klon.querySelector(".title").addEventListener("click", () => {
 
                         visModal(event);
@@ -140,7 +150,7 @@
                 }
             })
         }
-
+        //modal vindue function
         function visModal(eventene) {
             console.log("visModal");
             modal.classList.add("vis");
@@ -154,7 +164,7 @@
 
             modal.querySelector(".modal_close").addEventListener("click", skjulModal);
         }
-
+        //function til at skjule modal igen når man trykker på .modal_close
         function skjulModal() {
             console.log("skjulModal");
             modal.classList.remove("vis");

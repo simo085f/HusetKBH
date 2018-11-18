@@ -3,6 +3,7 @@
         src: url("Huset Regular/huset Regular.otf");
     }
 
+/*Stule af "main"*/
 body{
     margin: 0;
     background-image: url(wall.png);
@@ -23,6 +24,7 @@ main{
     font-size: 10vw;
 }
 
+/*style af textboks*/
 .introListview{
     border: 3px solid white;
     padding: 4vw;
@@ -33,6 +35,7 @@ main{
     font-family: avenir;
 }
 
+/*Style af boks 1*/
 .voluntaryListview{
     border: 3px solid white;
     display: grid;
@@ -63,6 +66,7 @@ main{
     z-index: 1;
 }
 
+/*Style af boks 2*/
 .faciliteterListview{
     border: 3px solid white;
     display: grid;
@@ -93,6 +97,7 @@ main{
     z-index: 1;
 }
 
+/*Style af boks 3*/
 .bookListview{
     border: 3px solid white;
     display: grid;
@@ -123,6 +128,7 @@ main{
     z-index: 1;
 }
 
+/*Style af boks 4*/
 .skabListview{
     border: 3px solid white;
     display: grid;
@@ -158,6 +164,7 @@ main{
     grid-gap: 5vw;
 }
 
+/*midiaqueries til responsivt site*/
 @media screen and (min-width:768px){
     .title{
         font-size: 7vw;

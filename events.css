@@ -3,6 +3,7 @@
         src: url("Huset Regular/huset Regular.otf");
     }
 
+/*style af "main"*/
 a{
     color:white;
 }
@@ -32,7 +33,7 @@ a{
         display: grid;
         grid-gap: 20px;
     }
-
+/*Style for event_container/ for hvert event der er at se på siden*/
     .event_container {
         border: 3px solid white;
         display: grid;
@@ -92,11 +93,19 @@ a{
     }
 
     .knapper {
-/*        padding: 4vw;*/
         color: white;
         text-align: center;
     }
 
+.image {
+        width: 100%;
+        grid-column: 1/9;
+        grid-row: 1/9;
+        z-index: 1;
+        opacity: 0.5;
+    }
+
+/*Style til soteringsknapperne*/
     .menu_item {
         font-family: Avenir;
         border: none;
@@ -111,15 +120,7 @@ a{
         color: gray;
     }
 
-    .image {
-        width: 100%;
-        grid-column: 1/9;
-        grid-row: 1/9;
-        z-index: 1;
-        opacity: 0.5;
-    }
-
-
+/*media queries til indholde at event_container*/
 @media screen and (min-width:768px){
 .events{
     display:grid;
@@ -203,7 +204,7 @@ a{
 }
 
 /*-------------------------------------------*/
-
+/*style af modalvindue*/
 #modal{
     background-image: url(wall.png);
     border: 1px solid white;
@@ -648,6 +649,7 @@ a{
 
 /*media queries for #modal --SLUT--*/
 
+/*Style af det invendie modal vindue*/
 #modal_content{
     width: 78vw;
     height: 100%;
@@ -719,6 +721,7 @@ a{
     margin-top: 3vw;
 }
 
+/*Media queries til modal content*/
 @media screen and (min-width:700px){
     #modal_content{
         grid-template-columns: repeat(2, 1fr);

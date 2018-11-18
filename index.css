@@ -3,6 +3,7 @@
         src: url("Huset Regular/huset Regular.otf");
     }
 
+/*styel af "main"*/
 body{
     margin: 0;
     background-image: url(wall.png);
@@ -33,6 +34,7 @@ main{
     width: 100%;
 }
 
+/*media queries til placering af elementerne på responsivt site*/
 @media screen and (min-width:1000px){
     main{
         margin-left: 16vw;
@@ -81,21 +83,23 @@ main{
     border: 3px solid white;
     padding: 4vw;
     color: white;
-    font-family: Avenir;
+
 }
 
 .container2{
     border: 3px solid white;
     padding: 4vw;
     color: white;
-    font-family: Avenir;
 }
 
 .container3{
     color: white;
-    font-family: Avenir;
     display: grid;
     grid-gap: 10px;
+}
+
+p{
+    font-family: Avenir;
 }
 
 h1{
@@ -115,6 +119,7 @@ h3{
     font-size: 5vw;
 }
 
+/*Style til events boksene*/
 .eventsListview{
     text-shadow: 2px 2px grey;
     display: grid;
@@ -203,11 +208,9 @@ a {
 
 }
 
-
-/* navigation */
-
-
 /*-----------------------------------------*/
+
+/*style til billed show (inspiration fra w3schools*/
 
  * {box-sizing:border-box}
 
@@ -585,6 +588,7 @@ i {
     }
 }
 
+/*media queries til eventsene*/
 @media screen and (min-width:768px){
     .container3{
     display:grid;
