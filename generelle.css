@@ -19,6 +19,7 @@ main{
 article h1{
     font-family: Huset;
     font-size: 30px;
+
 }
 
 
@@ -34,11 +35,22 @@ main a {
     text-decoration: underline;
 
 }
+@media screen and (min-width:768px){
+  main h1{
+        font-size: 40px;
+      margin-top: 0;
+    }
 
+}
 @media screen and (min-width:1024px){
     main{
         margin-right: 16vw;
         margin-left: 16vw;
+    }
+
+    article h1{
+        font-size: 50px;
+        margin-top: 0;
     }
 
 }

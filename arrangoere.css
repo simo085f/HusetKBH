@@ -30,10 +30,23 @@ article p{
     font-family: Avenir, sans-serif;
 }
 
+@media screen and (min-width:768px){
+  article h1{
+        font-size: 40px;
+      margin-top: 0;
+    }
+
+}
+
+
 @media screen and (min-width:1024px){
     main{
     margin-left: 16vw;
         margin-right: 16vw;
+    }
+    article h1{
+        font-size: 50px;
+        margin-top: 0;
     }
 
 }

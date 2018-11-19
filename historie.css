@@ -33,6 +33,10 @@ main a{
     color: white;
 }
 
+main p{
+    font-family: Avenir, sans-serif;
+}
+
 .timeline p{
     color: black;
     opacity: 1;
@@ -164,10 +168,23 @@ main a{
   }
 }
 
-@media screen and (max-width:1024){
+@media screen and (min-width:768px){
+  main h1{
+        font-size: 40px;
+      margin-top: 0;
+    }
+
+}
+
+@media screen and (min-width:1024px){
     #txt{
         margin-right: 16vw;
         margin-left: 16vw;
+    }
+
+    main h1{
+        font-size: 50px;
+        margin-top: 0;
     }
 
 
