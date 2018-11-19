@@ -16,17 +16,24 @@ main {
     margin-top: 15vw;
 }
 
+main h1{
+    font-family: Huset;
+    font-size: 30px;
+}
 
-h1,
-h3,
-h4,
-h5,
-p,
-a {
+main h2{
+    font-family:  'Avenir', sans-serif;
+    font-size: 18px;
+}
+
+
+
+main p,
+main a {
     font-family: 'Avenir', sans-serif;
 }
 
-a {
+main a {
     text-decoration: none;
     list-style: none;
     color: white;

@@ -19,9 +19,18 @@ body {
 
 }
 
+main h1{
+    font-family: Huset;
+    font-size: 30px;
+}
+
 main h2{
     font-family: Huset;
-    font-size: 2em;
+    font-size: 25px;
+}
+
+main a{
+    color: white;
 }
 
 .timeline p{
@@ -161,7 +170,5 @@ main h2{
         margin-left: 8vw;
     }
 
-    h2{
-    font-size: 2.5em;
-}
+
 }
