@@ -147,3 +147,11 @@ main{
 
 }
 
+@media screen and (min-width:1024px){
+    main{
+        margin-right: 16vw;
+        margin-left: 16vw;
+    }
+
+}
+

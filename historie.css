@@ -166,8 +166,8 @@ main a{
 
 @media screen and (max-width:1024){
     #txt{
-        margin-right: 8vw;
-        margin-left: 8vw;
+        margin-right: 16vw;
+        margin-left: 16vw;
     }
 
 
