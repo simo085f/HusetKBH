@@ -1,12 +1,233 @@
 <!DOCTYPE html>
 <html lang="">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dette er en mobilapp</title>
+    <link rel="stylesheet" href="index.css" type="text/css">
+    <title>Huset KBH mobil</title>
+
+    <link rel="manifest" href="manifest.json">
+
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="application-name" content="HUSET">
+<meta name="apple-mobile-web-app-title" content="HUSET">
+<meta name="theme-color" content="#11192A">
+<meta name="msapplication-navbutton-color" content="#11192A">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="msapplication-starturl" content="https://emmaviola.dk/kea/07-cms/mobile/mobile.html">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="icon" type="png" sizes="219x257" href="icon.png">
+<link rel="apple-touch-icon" type="png" sizes="219x257" href="icon.png">
+
 </head>
 
 <body>
+    <!--   <?php include "header.html";?>-->
 
+    <header>
+    <a href="mobile.html">EVENTS</a>
+    <a href="index.html">HUSET KBH</a>
+    </header>
+
+    <main>
+       <img class="event_logo" src="huset_neon.png" alt="">
+
+
+        <!--        section: introduktion til huset-->
+        <section class="container1" data-container1></section>
+        <template data-template1>
+            <article class="introListview">
+                <h2 data-title1></h2>
+                <p data-text1></p>
+            </article>
+        </template>
+        <!--        section: bliv frivillig-->
+        <section class="container2" data-container2></section>
+        <template data-template2>
+            <article class="voluntaryListview">
+                <h2 data-title2></h2>
+                <p data-text2></p>
+            </article>
+        </template>
+
+        <!-- Slideshow billeder af huset -->
+<div class="slideshow-container">
+
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 5</div>
+    <img src="billede_garreri_1.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 5</div>
+    <img src="billede_galleri_2.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 5</div>
+    <img src="billede_galleri_3.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">4 / 5</div>
+    <img src="billed_galleri_4.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">5 / 5</div>
+    <img src="billede_galleri_5.jpg" style="width:100%">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  <div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+</div>
+</div>
+<br>
+
+
+
+<!-- husets nyeste evnts-->
+
+        <h3>HUSETS NYESTE EVENTS</h3>
+
+        <section class="container3" data-container3>
+        </section>
+
+        <template class="template" data_template3>
+            <article class="eventsListview">
+                <div class="title"></div>
+                <div class="date"></div>
+                <div class="time"></div>
+                <div class="place"></div>
+                <div class="pris"></div>
+                <a class="kob_billet" href="events.html" target="_blank"><button class="kob_knap">LÆSE MERE</button></a>
+                <div class="genre"></div>
+                <div class="kob_billet_i_doren"></div>
+                <img class="image" src="" alt="">
+            </article>
+        </template>
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", getJSON);
+
+        let intro;
+        let introTemplate = document.querySelector("[data-template1]");
+        let introContainer = document.querySelector("[data-container1]");
+
+        let voluntary;
+        let voluntaryTemplate = document.querySelector("[data-template2]");
+        let voluntaryContainer = document.querySelector("[data-container2]");
+
+        let events;
+        let eventTemplate = document.querySelector("[data_template3]");
+        let eventContainer = document.querySelector("[data-container3]");
+
+
+        //-----------------------------------------------
+        async function getJSON() {
+
+            let jsonData1 = await fetch("https://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/home?slug=home-huset-kbh");
+            intro = await jsonData1.json();
+            visIntro();
+            console.log(intro);
+
+            let jsonData2 = await fetch("https://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/home?slug=home-bliv-frivillig");
+            voluntary = await jsonData2.json();
+            visVoluntary();
+            console.log(voluntary);
+
+            let jsonData3 = await fetch("https://emmaviola.dk/kea/07-cms/huset/wordpress/wp-json/wp/v2/events/?per_page=3");
+            events = await jsonData3.json();
+            visEvents();
+            console.log(events);
+        }
+
+        //----------------------------------------------
+
+        function visIntro() {
+            console.log(intro);
+            intro.forEach(intro => {
+                let klon = introTemplate.cloneNode(true).content;
+                klon.querySelector("[data-title1]").textContent = intro.title.rendered;
+                klon.querySelector("[data-text1]").innerHTML = intro.content.rendered;
+                introContainer.appendChild(klon);
+            })
+        }
+
+        function visVoluntary() {
+            console.log(voluntary);
+            voluntary.forEach(voluntary => {
+                let klon = voluntaryTemplate.cloneNode(true).content;
+                klon.querySelector("[data-title2]").textContent = voluntary.title.rendered;
+                klon.querySelector("[data-text2]").innerHTML = voluntary.content.rendered;
+                voluntaryContainer.appendChild(klon);
+            })
+        }
+
+        function visEvents() {
+            console.log(events);
+            events.forEach(events => {
+                let klon = eventTemplate.cloneNode(true).content;
+                klon.querySelector(".title").textContent = events.title.rendered;
+                klon.querySelector(".date").innerHTML = events.acf.date;
+                klon.querySelector(".time").innerHTML = events.acf.time;
+                klon.querySelector(".place").innerHTML = events.acf.place;
+                klon.querySelector(".pris").innerHTML = events.acf.pris +" kr.";
+                klon.querySelector(".image").src = events.acf.image;
+                eventContainer.appendChild(klon);
+            })
+        }
+
+        //_---------------------------------------------------
+
+
+        //--------------------------------------------------
+
+         var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+    </script>
 </body>
+
 </html>

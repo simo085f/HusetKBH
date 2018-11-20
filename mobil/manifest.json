@@ -1,0 +1,16 @@
+{
+  "name": "HUSET KBH",
+  "short_name": "HUSET",
+  "lang": "da-DK",
+  "start_url": "https://emmaviola.dk/kea/07-cms/mobile/mobile.html",
+  "scope": "/kea/07-cms/mobile/mobile.html",
+  "display": "standalone",
+  "theme_color": "#11192A",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "219x257",
+      "type": "png"
+    }
+  ]
+}

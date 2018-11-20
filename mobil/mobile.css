@@ -1,0 +1,826 @@
+    @font-face {
+        font-family: "Huset";
+        src: url("Huset Regular/huset Regular.otf");
+    }
+
+a{
+    color:white;
+}
+
+    body {
+        margin: 0;
+        background-image: url(wall.png);
+    }
+
+    .event_logo {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    main {
+        margin: 8vw;
+        color: white;
+        margin-top: 15vw;
+    }
+
+header{
+    font-family: Huset;
+    text-align: center;
+    font-size: 8vw;
+}
+
+    .events {
+        padding: 4vw;
+        color: white;
+        font-family: Avenir;
+        max-width: 100%;
+        display: grid;
+        grid-gap: 20px;
+    }
+
+    .event_container {
+        border: 3px solid white;
+        display: grid;
+        grid-template-columns: 10px repeat(2, 1fr) 10px;
+        grid-template-rows: 10px repeat(6, 1fr) 10px;
+        width: 100%;
+    }
+
+    .title {
+        font-size: 4.5vw;
+        grid-column: 2 / 5;
+        grid-row: 2 / 3;
+        z-index: 2;
+    }
+
+    .date {
+        font-family: Huset;
+        font-size: 8vw;
+        grid-column: 2/3;
+        grid-row: 3/4;
+        z-index: 2;
+    }
+
+    .kob_knap {
+        font-family: Avenir;
+        border: none;
+        font-size: 4vw;
+        padding: 2vw;
+        width: 40vw;
+    }
+
+    .kob_billet {
+        grid-column: 2/3;
+        grid-row: 7/8;
+        z-index: 2;
+    }
+
+    .time {
+        grid-column: 2/3;
+        grid-row: 4/5;
+        z-index: 2;
+        font-size: 4vw;
+    }
+
+    .place {
+        grid-column: 3/4;
+        grid-row: 3/4;
+        z-index: 2;
+        font-size: 4vw;
+    }
+
+    .pris {
+        grid-column: 3/4;
+        grid-row: 4/5;
+        z-index: 2;
+        font-size: 6vw;
+    }
+
+    .knapper {
+/*        padding: 4vw;*/
+        color: white;
+        text-align: center;
+    }
+
+    .menu_item {
+        font-family: Avenir;
+        border: none;
+        padding: 1vw;
+        font-size: 3vw;
+        background: none;
+        color: white;
+        border-bottom: 1px solid white;
+    }
+
+    .menu_item:hover {
+        color: gray;
+    }
+
+    .image {
+        width: 100%;
+        grid-column: 1/9;
+        grid-row: 1/9;
+        z-index: 1;
+        opacity: 0.6;
+    }
+
+
+@media screen and (min-width:768px){
+.events{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+}
+    .title{
+        font-size: 2.5vw;
+    }
+
+    .date{
+        font-size: 3.5vw;
+    }
+
+    .place{
+        font-size: 2vw;
+    }
+
+    .time{
+        font-size: 2vw;
+    }
+
+    .pris{
+        font-size: 3.5vw;
+    }
+
+    .kob_knap{
+        width: 16vw;
+        font-size: 2vw;
+        padding: 1vw;
+    }
+
+    .event_logo {
+        width: 40%;
+    }
+
+    .menu_item{
+        font-size: 2vw;
+    }
+}
+
+@media screen and (min-width:1024px){
+    .events{
+        display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px
+}
+    .title{
+        font-size: 1.5vw;
+    }
+
+    .date{
+        font-size: 2vw;
+    }
+
+    .place{
+        font-size: 1.2vw;
+    }
+
+    .time{
+        font-size: 1.2vw;
+    }
+
+    .pris{
+        font-size: 2vw;
+    }
+
+    .kob_knap{
+        width: 10vw;
+        font-size: 1vw;
+        padding: 0.7vw;
+    }
+
+    .event_logo {
+        width: 30%;
+    }
+
+    .menu_item{
+        font-size: 2vw;
+    }
+}
+
+/*-------------------------------------------*/
+
+#modal{
+    background-image: url(wall.png);
+    border: 1px solid white;
+    height:150vw;
+    width: 79vw;
+    position: fixed;
+    z-index: 3;
+    pointer-events: none;
+    padding: 3vw;
+    opacity: 0;
+    transition: 1;
+}
+
+/*media queries for #modal --START--*/
+
+@media screen and (min-width:420px){
+    #modal{
+        height: 140vw;
+    }
+
+    .modal_date{
+        font-size: 8vw;
+    }
+
+    .modal_place{
+        font-size: 4vw;
+    }
+
+    .modal_time{
+        font-size: 4vw;
+    }
+
+    .modal_pris{
+        font-size: 6vw;
+    }
+
+    .modal_langbeskrivelse{
+        font-size: 3vw;
+    }
+}
+
+@media screen and (min-width:452px){
+    #modal{
+        height: 130vw;
+    }
+
+    .modal_date{
+        font-size: 8vw;
+    }
+
+    .modal_place{
+        font-size: 4vw;
+    }
+
+    .modal_time{
+        font-size: 4vw;
+    }
+
+    .modal_pris{
+        font-size: 6vw;
+    }
+
+    .modal_langbeskrivelse{
+        font-size: 3vw;
+    }
+}
+
+@media screen and (min-width:480px){
+    #modal{
+        height: 120vw;
+    }
+
+    .modal_date{
+        font-size: 8vw;
+    }
+
+    .modal_place{
+        font-size: 4vw;
+    }
+
+    .modal_time{
+        font-size: 4vw;
+    }
+
+    .modal_pris{
+        font-size: 6vw;
+    }
+
+    .modal_langbeskrivelse{
+        font-size: 3vw;
+    }
+}
+
+@media screen and (min-width:520px){
+    #modal{
+        height: 110vw;
+    }
+
+    .modal_date{
+        font-size: 8vw;
+    }
+
+    .modal_place{
+        font-size: 4vw;
+    }
+
+    .modal_time{
+        font-size: 4vw;
+    }
+
+    .modal_pris{
+        font-size: 6vw;
+    }
+
+    .modal_langbeskrivelse{
+        font-size: 3vw;
+    }
+}
+
+@media screen and (min-width:560px){
+    #modal{
+        height: 100vw;
+    }
+
+    .modal_date{
+        font-size: 8vw;
+    }
+
+    .modal_place{
+        font-size: 4vw;
+    }
+
+    .modal_time{
+        font-size: 4vw;
+    }
+
+    .modal_pris{
+        font-size: 6vw;
+    }
+
+    .modal_langbeskrivelse{
+        font-size: 3vw;
+    }
+}
+
+@media screen and (min-width:600px){
+    #modal{
+        height: 90vw;
+    }
+
+    .modal_date{
+        font-size: 8vw;
+    }
+
+    .modal_place{
+        font-size: 4vw;
+    }
+
+    .modal_time{
+        font-size: 4vw;
+    }
+
+    .modal_pris{
+        font-size: 6vw;
+    }
+
+    .modal_langbeskrivelse{
+        font-size: 3vw;
+    }
+}
+
+@media screen and (min-width:645px){
+    #modal{
+        height: 80vw;
+    }
+
+    .modal_navn{
+        font-size: 2vw;
+    }
+
+    .modal_date{
+        font-size: 6vw;
+    }
+
+    .modal_place{
+        font-size: 3vw;
+    }
+
+    .modal_time{
+        font-size: 3vw;
+    }
+
+    .modal_pris{
+        font-size: 4vw;
+    }
+
+    .modal_langbeskrivelse{
+        font-size: 2vw;
+    }
+}
+
+@media screen and (min-width:720px){
+    #modal{
+        height: 70vw;
+    }
+
+    .modal_navn{
+        font-size: 2vw;
+    }
+
+    .modal_date{
+        font-size: 6vw;
+    }
+
+    .modal_place{
+        font-size: 3vw;
+    }
+
+    .modal_time{
+        font-size: 3vw;
+    }
+
+    .modal_pris{
+        font-size: 4vw;
+    }
+
+    .modal_langbeskrivelse{
+        font-size: 2vw;
+    }
+
+}
+
+@media screen and (min-width:800px){
+    #modal{
+        height: 60vw;
+    }
+
+    .modal_navn{
+        font-size: 2vw;
+    }
+
+    .modal_date{
+        font-size: 6vw;
+    }
+
+    .modal_place{
+        font-size: 3vw;
+    }
+
+    .modal_time{
+        font-size: 3vw;
+    }
+
+    .modal_pris{
+        font-size: 4vw;
+    }
+
+    .modal_langbeskrivelse{
+        font-size: 2vw;
+    }
+}
+
+@media screen and (min-width:900px){
+    #modal{
+        height: 50vw;
+    }
+
+    .modal_navn{
+        font-size: 2vw;
+    }
+
+    .modal_date{
+        font-size: 6vw;
+    }
+
+    .modal_place{
+        font-size: 3vw;
+    }
+
+    .modal_time{
+        font-size: 3vw;
+    }
+
+    .modal_pris{
+        font-size: 4vw;
+    }
+
+    .modal_langbeskrivelse{
+        font-size: 2vw;
+    }
+}
+
+@media screen and (min-width:1020px){
+    #modal{
+        height: 45vw;
+    }
+
+    .modal_navn{
+        font-size: 2vw;
+    }
+
+    .modal_date{
+        font-size: 6vw;
+    }
+
+    .modal_place{
+        font-size: 3vw;
+    }
+
+    .modal_time{
+        font-size: 3vw;
+    }
+
+    .modal_pris{
+        font-size: 4vw;
+    }
+
+    .modal_langbeskrivelse{
+        font-size: 2vw;
+    }
+}
+
+@media screen and (min-width:1100px){
+    #modal{
+        height: 40vw;
+    }
+
+    .modal_navn{
+        font-size: 2vw;
+    }
+
+    .modal_date{
+        font-size: 6vw;
+    }
+
+    .modal_place{
+        font-size: 3vw;
+    }
+
+    .modal_time{
+        font-size: 3vw;
+    }
+
+    .modal_pris{
+        font-size: 4vw;
+    }
+
+    .modal_langbeskrivelse{
+        font-size: 2vw;
+    }
+}
+
+@media screen and (min-width:1190px){
+    #modal{
+        height: 35vw;
+    }
+
+    .modal_navn{
+        font-size: 2vw;
+    }
+
+    .modal_date{
+        font-size: 6vw;
+    }
+
+    .modal_place{
+        font-size: 3vw;
+    }
+
+    .modal_time{
+        font-size: 3vw;
+    }
+
+    .modal_pris{
+        font-size: 4vw;
+    }
+
+    .modal_langbeskrivelse{
+        font-size: 2vw;
+    }
+}
+
+@media screen and (min-width:1290px){
+    #modal{
+        height: 30vw;
+    }
+
+    .modal_navn{
+        font-size: 2vw;
+    }
+
+    .modal_date{
+        font-size: 6vw;
+    }
+
+    .modal_place{
+        font-size: 3vw;
+    }
+
+    .modal_time{
+        font-size: 3vw;
+    }
+
+    .modal_pris{
+        font-size: 4vw;
+    }
+
+    .modal_langbeskrivelse{
+        font-size: 2vw;
+    }
+}
+
+@media screen and (min-width:1400px){
+    #modal{
+        height: 25vw;
+    }
+
+    .modal_navn{
+        font-size: 2vw;
+    }
+
+    .modal_date{
+        font-size: 6vw;
+    }
+
+    .modal_place{
+        font-size: 3vw;
+    }
+
+    .modal_time{
+        font-size: 3vw;
+    }
+
+    .modal_pris{
+        font-size: 4vw;
+    }
+
+    .modal_langbeskrivelse{
+        font-size: 2vw;
+    }
+}
+
+/*media queries for #modal --SLUT--*/
+
+#modal_content{
+    width: 78vw;
+    height: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4 1fr);
+    grid-template-rows: repeat (9 1fr);
+    overflow: scroll;
+}
+
+#modal.vis{
+    opacity: 4;
+    pointer-events: all;
+    transition: 0.7s;
+}
+
+.modal_close{
+    background-image: url(wall.png);
+    padding: 1vw;
+    font-family: huset;
+    font-size: 50px;
+    position: fixed;
+    color: white;
+    border: none;
+}
+
+.modal_navn{
+    font-family: avenir;
+    font-size: 1.5em;
+    grid-column: 1/3;
+    grid-row: 2/3;
+    margin-top: 100px;
+}
+
+.modal_date{
+    font-family: huset;
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+.modal_time{
+    font-family: avenir;
+    grid-column: 1/2;
+    grid-row: 4/5;
+}
+
+.modal_place{
+    font-family: avenir;
+    grid-column: 3/4;
+    grid-row: 3/4;
+}
+
+.modal_pris{
+    font-family: avenir;
+    grid-column: 3/4;
+    grid-row: 4/5;
+}
+
+.modal_langbeskrivelse{
+    font-family: avenir;
+    grid-column: 1/4;
+    grid-row: 7/8;
+}
+
+.modal_image{
+    width: 100%;
+    grid-column: 1/4;
+    grid-row: 6/7;
+    margin-top: 3vw;
+}
+
+@media screen and (min-width:700px){
+    #modal_content{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+    }
+
+    .modal_navn{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+
+    .modal_date{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+
+    .modal_time{
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+
+    .modal_place{
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+
+    .modal_pris{
+        grid-column: 1/2;
+        grid-row: 5/6;
+    }
+
+    .modal_image{
+        grid-column: 2/3;
+        grid-row: 1/6;
+        width: 100%;
+    }
+
+    .modal_langbeskrivelse{
+        grid-column: 1/3;
+        grid-row: 6/7;
+    }
+
+}
+@media screen and (min-width:778px){
+    .modal_image{
+        grid-column: 2/3;
+        grid-row: 1/6;
+        width: 80%;
+    }
+    .modal_navn{
+        font-size: 2em;
+    }
+    .modal_date{
+        font-size: 2.5em;
+    }
+
+    .modal_time{
+        font-size: 1.5em;
+    }
+
+    .modal_place{
+        font-size: 1.5em;
+    }
+
+    .modal_pris{
+        font-size: 1.5em;
+    }
+}
+@media screen and (min-width:960px){
+    .modal_image{
+        grid-column: 2/3;
+        grid-row: 1/6;
+        width: 55%;
+        display: none;
+    }
+
+    .modal_navn{
+        font-size: 1.5em;
+    }
+    .modal_date{
+        font-size: 2em;
+    }
+
+    .modal_time{
+        font-size: 1em;
+    }
+
+    .modal_place{
+        font-size: 1em;
+    }
+
+    .modal_pris{
+        font-size: 1em;
+    }
+
+    .modal_langbeskrivelse{
+        font-size: 1em;
+    }
+}
+//----------------------------------------
