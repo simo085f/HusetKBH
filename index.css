@@ -9,7 +9,7 @@ body{
     background-image: url(wall.png);
 }
 
-img{
+.container3 img{
     width: 100%;
 }
 
@@ -379,6 +379,7 @@ main a {
 form{
         border: 4px solid none;
         font-family: huset;
+    margin-bottom: 4vw;
 
     }
 
@@ -404,7 +405,7 @@ form{
         opacity: 0.8;
     }
 
-@media screen and (min-width:1024px){
+@media screen and (min-width:1000px){
     form{
 
     grid-column-start: 1;
