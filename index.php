@@ -111,17 +111,18 @@
         <form action="action_page.php">
 
 
-  <div class="container">
+  <div class="container_nyhed">
    <div>
       <h2 class="nyhedsbrev">NYHEDSBREV</h2>
   </div>
-    <input type="text" placeholder="Name" name="name" required>
-    <input type="text" placeholder="Email address" name="mail" required>
-  </div>
+    <input type="text" placeholder="Navn" name="name" required>
+    <input type="text" placeholder="Email" name="mail" required>
+
 
   <div class="container">
     <input type="submit" value="Subscribe">
   </div>
+      </div>
 </form>
 
     </main>
