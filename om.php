@@ -12,6 +12,7 @@
 </head>
 
 <body>
+    <?php include "header.html";?>
     <main>
         <!--Template til indholdet der skal bruges i javascript når man skal indsætte elementerne fra json filen-->
         <section class="container" data-container></section>
@@ -24,6 +25,8 @@
 
 
     </main>
+
+    <?php include "footer.html";?>
 
 
     <script>

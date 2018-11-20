@@ -9,6 +9,8 @@
 </head>
 <body>
 
+    <?php include "header.html";?>
+
    <main>
        <section id="txt">
     <section class="container" data-container></section>
@@ -174,6 +176,8 @@ Spisehuset Fair</p>
 </section>
 
 </main>
+
+    <?php include "footer.html";?>
 
    <script>
    document.addEventListener("DOMContentLoaded", getJSON);

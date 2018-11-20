@@ -11,7 +11,8 @@
 </head>
 
 <body>
-    <header></header>
+
+    <?php include "header.html";?>
 
     <main>
 <!--       Section til indhold af modale vinduet, når man trykker på et event-->
@@ -61,6 +62,8 @@
         </template>
 
     </main>
+
+    <?php include "footer.html";?>
 
     <script>
         //Event der gør at HTML loades før json loades

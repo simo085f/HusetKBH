@@ -9,6 +9,8 @@
 </head>
 <body>
 
+    <?php include "header.html";?>
+
    <main>
     <section class="container" data-container></section>
          <template data-template>
@@ -65,6 +67,9 @@
 
 
    </main>
+
+    <?php include "header.html";?>
+
    <script>
 
         document.addEventListener("DOMContentLoaded", getJSON);

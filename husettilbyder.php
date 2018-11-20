@@ -9,6 +9,9 @@
 </head>
 
 <body>
+
+    <?php include "header.html";?>
+
     <main>
 
         <!--       Section til overskift + info-->
@@ -58,6 +61,8 @@
 </div>
 
     </main>
+
+    <?php include "footer.html";?>
 
 </body>
 <script>

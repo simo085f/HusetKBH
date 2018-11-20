@@ -9,7 +9,8 @@
 </head>
 
 <body>
-    <header></header>
+
+    <?php include "header.html";?>
 
     <main>
 
@@ -26,6 +27,8 @@
         </template>
 
     </main>
+
+    <?php include "footer.html";?>
 
     <script>
         document.addEventListener("DOMContentLoaded", getJson);

@@ -11,6 +11,8 @@
 
 <body>
 
+    <?php include "header.html";?>
+
     <template class="blivfrivillig_template">
             <article class="container">
                <div class="tekst"></div>
@@ -19,7 +21,7 @@
             </article>
         </template>
 
-    <header>Huset nav</header>
+
     <main>
         <section class="container" data-container></section>
         <template data-template>
@@ -43,7 +45,7 @@
 
 
 
-
+<?php include "footer.html";?>
 
 </body>
 <script>

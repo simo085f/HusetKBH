@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <!--   <?php include "header.html";?>-->
+    <?php include "header.html";?>
 
 
     <main>
@@ -126,9 +126,7 @@
 
     </main>
 
-    <footer>
-
-    </footer>
+<?php include "footer.html";?>
 
     <script>
         //Event der gør at HTML loades før json loades

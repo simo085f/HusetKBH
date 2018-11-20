@@ -16,6 +16,10 @@ footer {
     text-align: center;
 }
 
+footer h2, footer p{
+    font-family: Avenir, sans-serif;
+}
+
 footer img{
  height: 100%;
 }
