@@ -16,17 +16,24 @@ main {
     margin-top: 15vw;
 }
 
+main h1{
+    font-family: Huset;
+    font-size: 30px;
+}
 
-h1,
-h3,
-h4,
-h5,
-p,
-a {
+main h2{
+    font-family:  'Avenir', sans-serif;
+    font-size: 18px;
+}
+
+
+
+main p,
+main a {
     font-family: 'Avenir', sans-serif;
 }
 
-a {
+main a {
     text-decoration: none;
     list-style: none;
     color: white;
@@ -34,10 +41,66 @@ a {
 
 }
 
-.blivfrivillig_template {
-    padding: 4vw;
+
+ form {
+                width: "100%";
+                border: 3px solid white;
+                padding: 4vw;
+     margin-left: 8vw;
+     margin-right: 8vw;
+            }
+
+form h2{
     color: white;
-    font-family: Avenir;
+    font-family: avenir, sans-serif;
+    margin: 2%;
+}
+
+            input {
+                width: 40%;
+                border: solid 2px white;
+                padding: 2%;
+                margin: 2%;
+                font-size: 16px;
+                font-family: avenir, sans-serif;
+            }
+
+            textarea {
+                width: 90%;
+                margin: 2%;
+                height: 200px;
+                padding: 2%;
+                font-size: 16px;
+                font-family: avenir, sans-serif;
+
+            }
+
+            input [type=submit] {
+                width: 120px;
+                background-color: aqua;
+                color: bisque;
+            }
+
+
+@media screen and (min-width:768px){
+  main h1{
+        font-size: 40px;
+      margin-top: 0;
+    }
+
+}
+
+@media screen and (min-width:1024px){
+    main, form{
+        margin-right: 16vw;
+        margin-left: 16vw;
+    }
+
+    main h1{
+        font-size: 50px;
+        margin-top: 0;
+    }
+
 }
 
 

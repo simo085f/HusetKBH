@@ -19,20 +19,21 @@ main{
     color: white;
 }
 
-.title{
+.title {
     font-family: huset;
-    font-size: 10vw;
+    font-size: 30px;
 }
 
 /*style af textboks*/
 .introListview{
     border: 3px solid white;
     padding: 4vw;
-    padding-top: 0;
+
     margin-bottom: 4vw;
 }
 .paragraf{
-    font-family: avenir;
+    font-family: Avenir, sans-serif;
+    font-size: 16px;
 }
 
 /*Style af boks 1*/
@@ -52,11 +53,13 @@ main{
     grid-column: 1 / 2;
     grid-row: 2 /3;
     z-index: 2;
+    cursor: pointer;
 }
 
 .title1:hover{
     grid-row: 1/4;
     padding-top: 28vw;
+
 }
 
 .image1{
@@ -83,6 +86,7 @@ main{
     grid-column: 1 / 2;
     grid-row: 2 /3;
     z-index: 2;
+    cursor: pointer;
 }
 
 .title2:hover{
@@ -114,6 +118,7 @@ main{
     grid-column: 1 / 2;
     grid-row: 2 /3;
     z-index: 2;
+    cursor: pointer;
 }
 
 .title3:hover{
@@ -145,6 +150,7 @@ main{
     grid-column: 1 / 2;
     grid-row: 2 /3;
     z-index: 2;
+    cursor: pointer;
 }
 
 .title4:hover{
@@ -167,12 +173,10 @@ main{
 /*midiaqueries til responsivt site*/
 @media screen and (min-width:768px){
     .title{
-        font-size: 7vw;
+        font-size: 40px;
+        margin-top: 0;
     }
 
-    .paragraf{
-        font-size: 2vw;
-    }
 
     .billeder{
         display: grid;
@@ -202,6 +206,7 @@ main{
 
     .title1{
         font-size: 2vw;
+        padding-top: 2vw;
     }
 
     .title1:hover{
@@ -210,6 +215,7 @@ main{
 
     .title2{
         font-size: 2vw;
+        padding-top: 2vw;
     }
 
     .title2:hover{
@@ -218,6 +224,7 @@ main{
 
     .title3{
         font-size: 2vw;
+        padding-top: 2vw;
     }
 
     .title3:hover{
@@ -226,6 +233,7 @@ main{
 
     .title4{
         font-size: 2vw;
+        padding-top: 2vw;
     }
 
     .title4:hover{
@@ -233,15 +241,19 @@ main{
     }
 }
 
-@media screen and (min-width:1100px){
+@media screen and (min-width:1024px){
+    main{
+        margin-right: 16vw;
+        margin-left: 16vw;
+    }
     .title{
-        font-size: 4vw;
+        font-size: 50px;
+        margin-top: 0;
     }
 
-    .paragraf{
-        font-size: 1.5vw;
-    }
 }
+
+
 
 
 

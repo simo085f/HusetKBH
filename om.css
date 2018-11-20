@@ -15,22 +15,11 @@ main {
     margin-top: 15vw;
 }
 
-a {
+main a {
 
     color: white;
 }
 
-#tider a {
-    color: black;
-}
-
-h3,
-h4,
-h5,
-p,
-a {
-    font-family: 'Avenir', sans-serif;
-}
 
 article h1{
     font-family: Huset;
@@ -43,6 +32,26 @@ main p, main a, main h4, main h5{
     font-size: 16px;
 }
 
+@media screen and (min-width:768px){
+    article h1{
+        font-size: 40px;
+        margin-top: 0;
+    }
+
+}
+
+@media screen and (min-width:1024px){
+    main{
+        margin-right: 16vw;
+        margin-left: 16vw;
+    }
+
+article h1{
+        font-size: 50px;
+    margin-top: 0;
+    }
+
+}
 
 
 

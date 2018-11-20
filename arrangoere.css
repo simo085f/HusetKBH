@@ -16,19 +16,37 @@ main {
     margin-top: 15vw;
 }
 
-a {
+main a {
 
     color: white;
 }
 
-article h2{
+article h1{
     font-family: Huset;
-    font-size: 2em;
+    font-size: 30px;
 }
+
+article p{
+    font-family: Avenir, sans-serif;
+}
+
+@media screen and (min-width:768px){
+  article h1{
+        font-size: 40px;
+      margin-top: 0;
+    }
+
+}
+
 
 @media screen and (min-width:1024px){
     main{
-    margin: 10vw 13vw 4vw 13vw;
+    margin-left: 16vw;
+        margin-right: 16vw;
+    }
+    article h1{
+        font-size: 50px;
+        margin-top: 0;
     }
 
 }

@@ -22,10 +22,15 @@ main p{
 }
 
 
-article h1, article h2 {
+article h1 {
 
     font-family: Huset;
     font-size: 30px;
+}
+
+article h2{
+    font-size: 18px;
+    font-family: avenir, sans-serif;
 }
 
 main a {
@@ -33,5 +38,26 @@ main a {
     list-style: none;
     color: white;
     text-decoration: underline;
+
+}
+@media screen and (min-width:768px){
+  article h1{
+        font-size: 40px;
+      margin-top: 0;
+    }
+
+
+}
+
+@media screen and (min-width:1024px){
+    main{
+        margin-right: 16vw;
+        margin-left: 16vw;
+    }
+
+    article h1{
+        font-size: 50px;
+        margin-top: 0;
+    }
 
 }
