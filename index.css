@@ -379,8 +379,7 @@ main a {
 form{
         border: 4px solid none;
         font-family: huset;
-    grid-column-start: 1;
-    grid-column-end: 3;
+
     }
 
     input[type=text], input[type=submit]{
@@ -392,6 +391,7 @@ form{
         box-sizing: border-box;
         font-family: avenir, sans-serif;
         background: none;
+        color: white;
     }
 
     input[type=submit]{
@@ -403,3 +403,11 @@ form{
     input[type=submit]:hover{
         opacity: 0.8;
     }
+
+@media screen and (min-width:1024px){
+    form{
+
+    grid-column-start: 1;
+    grid-column-end: 3;
+    }
+}
